@@ -1,0 +1,142 @@
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+.table-hover .table-primary:hover {
+  background-color: #aedcf5;
+}
+
+.table-hover .table-primary:hover > td,
+.table-hover .table-primary:hover > th {
+  background-color: #aedcf5;
+}
+
+.table-hover .table-secondary:hover {
+  background-color: #eaedf1;
+}
+
+.table-hover .table-secondary:hover > td,
+.table-hover .table-secondary:hover > th {
+  background-color: #eaedf1;
+}
+
+.table-hover .table-success:hover {
+  background-color: #cbdfb6;
+}
+
+.table-hover .table-success:hover > td,
+.table-hover .table-success:hover > th {
+  background-color: #cbdfb6;
+}
+
+.table-hover .table-info:hover {
+  background-color: #a8bbcf;
+}
+
+.table-hover .table-info:hover > td,
+.table-hover .table-info:hover > th {
+  background-color: #a8bbcf;
+}
+
+.table-hover .table-warning:hover {
+  background-color: #f2c1a2;
+}
+
+.table-hover .table-warning:hover > td,
+.table-hover .table-warning:hover > th {
+  background-color: #f2c1a2;
+}
+
+.table-hover .table-danger:hover {
+  background-color: #eaabad;
+}
+
+.table-hover .table-danger:hover > td,
+.table-hover .table-danger:hover > th {
+  background-color: #eaabad;
+}
+
+.table-hover .table-light:hover {
+  background-color: #ececf6;
+}
+
+.table-hover .table-light:hover > td,
+.table-hover .table-light:hover > th {
+  background-color: #ececf6;
+}
+
+.table-hover .table-dark:hover {
+  background-color: #b9bbbe;
+}
+
+.table-hover .table-dark:hover > td,
+.table-hover .table-dark:hover > th {
+  background-color: #b9bbbe;
+}
+
+.table-hover .table-active:hover {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+.table-hover .table-active:hover > td,
+.table-hover .table-active:hover > th {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+.table-dark.table-hover tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.075);
+}
+
+.table-active,
+.table-active > th,
+.table-active > td {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+.table-primary,
+.table-primary > th,
+.table-primary > td {
+  background-color: #c5e6f8;
+}
+
+.table-secondary,
+.table-secondary > th,
+.table-secondary > td {
+  background-color: #f9fafb;
+}
+
+.table-success,
+.table-success > th,
+.table-success > td {
+  background-color: #d8e7c8;
+}
+
+.table-danger,
+.table-danger > th,
+.table-danger > td {
+  background-color: #efbfc1;
+}
+
+.table-warning,
+.table-warning > th,
+.table-warning > td {
+  background-color: #f5d0b8;
+}
+
+.table-info,
+.table-info > th,
+.table-info > td {
+  background-color: #b8c8d8;
+}
+
+.table-light,
+.table-light > th,
+.table-light > td {
+  background-color: #fdfdfe;
+}
+
+.table-dark,
+.table-dark > th,
+.table-dark > td {
+  background-color: #c6c8ca;
+}
