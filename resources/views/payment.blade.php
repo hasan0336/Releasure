@@ -148,21 +148,23 @@
 
           <div class="col-sm-10 col-md-10 col-lg-10">
 
-              <div class="col-sm-12 col-md-12 col-lg-12 padding0">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align: center">
 
-                <div class="col-sm-3 col-md-3 col-lg-3">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                   <div class="card">
-                    <div class="payment-add">
-                      <button type="button" class="btn add-payment-btn" data-toggle="modal" data-target="#addcartModal">Add Card</button>
+                    <div class="card__add">                    
+                      <div class="payment-add">
+                        <button type="button" class="btn add-payment-btn" data-toggle="modal" data-target="#addcartModal">Add Card</button>
+                      </div>
                     </div>
                   </div>
                 </div>
                 
-                <div class="col-sm-3 col-md-3 col-lg-3">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                   <div class="card">
                     <div class="card__front card__part">
-                      <img class="card__front-square card__square" src="https://image.ibb.co/cZeFjx/little_square.png">
-                      <img class="card__front-logo card__logo" src="https://www.fireeye.com/partners/strategic-technology-partners/visa-fireeye-cyber-watch-program/_jcr_content/content-par/grid_20_80_full/grid-20-left/image.img.png/1505254557388.png">
+                      <img class="card__front-square card__square" src="img/little_square.png">
+                      <img class="card__front-logo card__logo" src="img/visa.png">
                       <p class="card_numer">**** **** **** 6258</p>
                       <div class="card__space-75">
                         <span class="card__label">Card holder</span>
@@ -176,11 +178,11 @@
                   </div>
                 </div>
 
-                <div class="col-sm-3 col-md-3 col-lg-3">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                   <div class="card">
                     <div class="card__front card__part">
-                      <img class="card__front-square card__square" src="https://image.ibb.co/cZeFjx/little_square.png">
-                      <img class="card__front-logo card__logo" src="https://www.fireeye.com/partners/strategic-technology-partners/visa-fireeye-cyber-watch-program/_jcr_content/content-par/grid_20_80_full/grid-20-left/image.img.png/1505254557388.png">
+                      <img class="card__front-square card__square" src="img/little_square.png">
+                      <img class="card__front-logo card__logo" src="img/visa.png">
                       <p class="card_numer">**** **** **** 6258</p>
                       <div class="card__space-75">
                         <span class="card__label">Card holder</span>
@@ -194,11 +196,11 @@
                   </div>
                 </div>
 
-                <div class="col-sm-3 col-md-3 col-lg-3">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                   <div class="card">
                     <div class="card__front card__part">
-                      <img class="card__front-square card__square" src="https://image.ibb.co/cZeFjx/little_square.png">
-                      <img class="card__front-logo card__logo" src="https://www.fireeye.com/partners/strategic-technology-partners/visa-fireeye-cyber-watch-program/_jcr_content/content-par/grid_20_80_full/grid-20-left/image.img.png/1505254557388.png">
+                      <img class="card__front-square card__square" src="img/little_square.png">
+                      <img class="card__front-logo card__logo" src="img/visa.png">
                       <p class="card_numer">**** **** **** 6258</p>
                       <div class="card__space-75">
                         <span class="card__label">Card holder</span>
@@ -212,11 +214,11 @@
                   </div>
                 </div>
 
-                <div class="col-sm-3 col-md-3 col-lg-3">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                   <div class="card">
                     <div class="card__front card__part">
-                      <img class="card__front-square card__square" src="https://image.ibb.co/cZeFjx/little_square.png">
-                      <img class="card__front-logo card__logo" src="https://www.fireeye.com/partners/strategic-technology-partners/visa-fireeye-cyber-watch-program/_jcr_content/content-par/grid_20_80_full/grid-20-left/image.img.png/1505254557388.png">
+                      <img class="card__front-square card__square" src="img/little_square.png">
+                      <img class="card__front-logo card__logo" src="img/visa.png">
                       <p class="card_numer">**** **** **** 6258</p>
                       <div class="card__space-75">
                         <span class="card__label">Card holder</span>
@@ -230,11 +232,11 @@
                   </div>
                 </div>
 
-                <div class="col-sm-3 col-md-3 col-lg-3">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                   <div class="card">
                     <div class="card__front card__part">
-                      <img class="card__front-square card__square" src="https://image.ibb.co/cZeFjx/little_square.png">
-                      <img class="card__front-logo card__logo" src="https://www.fireeye.com/partners/strategic-technology-partners/visa-fireeye-cyber-watch-program/_jcr_content/content-par/grid_20_80_full/grid-20-left/image.img.png/1505254557388.png">
+                      <img class="card__front-square card__square" src="img/little_square.png">
+                      <img class="card__front-logo card__logo" src="img/visa.png">
                       <p class="card_numer">**** **** **** 6258</p>
                       <div class="card__space-75">
                         <span class="card__label">Card holder</span>
@@ -248,11 +250,11 @@
                   </div>
                 </div>
 
-                <div class="col-sm-3 col-md-3 col-lg-3">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                   <div class="card">
                     <div class="card__front card__part">
-                      <img class="card__front-square card__square" src="https://image.ibb.co/cZeFjx/little_square.png">
-                      <img class="card__front-logo card__logo" src="https://www.fireeye.com/partners/strategic-technology-partners/visa-fireeye-cyber-watch-program/_jcr_content/content-par/grid_20_80_full/grid-20-left/image.img.png/1505254557388.png">
+                      <img class="card__front-square card__square" src="img/little_square.png">
+                      <img class="card__front-logo card__logo" src="img/visa.png">
                       <p class="card_numer">**** **** **** 6258</p>
                       <div class="card__space-75">
                         <span class="card__label">Card holder</span>
@@ -266,11 +268,83 @@
                   </div>
                 </div>
 
-                <div class="col-sm-3 col-md-3 col-lg-3">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                   <div class="card">
                     <div class="card__front card__part">
-                      <img class="card__front-square card__square" src="https://image.ibb.co/cZeFjx/little_square.png">
-                      <img class="card__front-logo card__logo" src="https://www.fireeye.com/partners/strategic-technology-partners/visa-fireeye-cyber-watch-program/_jcr_content/content-par/grid_20_80_full/grid-20-left/image.img.png/1505254557388.png">
+                      <img class="card__front-square card__square" src="img/little_square.png">
+                      <img class="card__front-logo card__logo" src="img/visa.png">
+                      <p class="card_numer">**** **** **** 6258</p>
+                      <div class="card__space-75">
+                        <span class="card__label">Card holder</span>
+                        <p class="card__info">John Doe</p>
+                      </div>
+                      <div class="card__space-25">
+                        <span class="card__label">Expires</span>
+                          <p class="card__info">10/25</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                  <div class="card">
+                    <div class="card__front card__part">
+                      <img class="card__front-square card__square" src="img/little_square.png">
+                      <img class="card__front-logo card__logo" src="img/visa.png">
+                      <p class="card_numer">**** **** **** 6258</p>
+                      <div class="card__space-75">
+                        <span class="card__label">Card holder</span>
+                        <p class="card__info">John Doe</p>
+                      </div>
+                      <div class="card__space-25">
+                        <span class="card__label">Expires</span>
+                          <p class="card__info">10/25</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                  <div class="card">
+                    <div class="card__front card__part">
+                      <img class="card__front-square card__square" src="img/little_square.png">
+                      <img class="card__front-logo card__logo" src="img/visa.png">
+                      <p class="card_numer">**** **** **** 6258</p>
+                      <div class="card__space-75">
+                        <span class="card__label">Card holder</span>
+                        <p class="card__info">John Doe</p>
+                      </div>
+                      <div class="card__space-25">
+                        <span class="card__label">Expires</span>
+                          <p class="card__info">10/25</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                  <div class="card">
+                    <div class="card__front card__part">
+                      <img class="card__front-square card__square" src="img/little_square.png">
+                      <img class="card__front-logo card__logo" src="img/visa.png">
+                      <p class="card_numer">**** **** **** 6258</p>
+                      <div class="card__space-75">
+                        <span class="card__label">Card holder</span>
+                        <p class="card__info">John Doe</p>
+                      </div>
+                      <div class="card__space-25">
+                        <span class="card__label">Expires</span>
+                          <p class="card__info">10/25</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                  <div class="card">
+                    <div class="card__front card__part">
+                      <img class="card__front-square card__square" src="img/little_square.png">
+                      <img class="card__front-logo card__logo" src="img/visa.png">
                       <p class="card_numer">**** **** **** 6258</p>
                       <div class="card__space-75">
                         <span class="card__label">Card holder</span>
@@ -294,7 +368,7 @@
   </div>
 
   <footer class="inner-footer">
-    <p>&copy; Releasur 2018. All Rights Reserved.</p>
+    <p>&copy; Releasur 2019. All Rights Reserved.</p>
     <ul class="list-inline">
       <li class="list-inline-item">
         <a href="#">Privacy</a>

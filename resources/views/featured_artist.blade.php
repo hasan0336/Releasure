@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-@include('partials.home_header')
+  <head>
+    <meta charset="utf-8">
+    <title>Featured Artist | Releasur</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <!-- <link rel="stylesheet" href="css/chat.css"> -->
+    <link rel="stylesheet" href="css/inner-css.css">
+
+  </head>
 
   <body>
 
@@ -17,7 +31,43 @@
             <img src="img/logo.png" class="img-responsive img-rounded" alt="Releasur Logo">
           </a>
         </div>
-        @include('partials.home_menu_bar')
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about_us">About Us</a></li>
+            <li><a href="index.html#what_we_do">What We Do</a></li>
+            <li><a href="index.html#featured_artist">Featured Artist</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li>
+              <a class="dropdown-toggle" data-toggle="dropdown">
+                <div class="hidden-xs">Administrator&emsp;
+                  <img src="img/profile_pic.jpg" class="img-circle" alt="User Image">
+                </div>
+              </a>
+
+              <ul class="dropdown-menu">
+                <li class="user-header">
+                  <img src="img/user2.jpg" class="img-circle img-responsive" style="margin:0 auto" alt="User Image">
+                  <p>Administrator<small>admin@technado.co</small></p>
+                </li>
+
+                <li class="user-footer">
+                  <div class="pull-left">
+                    <a href="#" data-toggle="modal" data-target="#myModal_header" class="btn btn-default btn-flat">Profile</a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <form id="demo-2" class="search-bar-setting">
+                <input type="search">
+              </form>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 
@@ -101,7 +151,7 @@
             <div class="col-sm-12 col-md-12 col-lg-12">
 
               <!-- Start of 1st image -->
-              <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <div class="featured-slideshow">
                   <div class="featured-flip1">
                     <img src="img/person1.jpg" alt="Avatar" class="image">
@@ -132,7 +182,7 @@
               <!-- //End of 1st image -->
 
               <!-- Start of 2nd image -->
-              <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <div class="featured-slideshow1">
                   <div class="featured-flip2">
                     <img src="img/person3.jpg" alt="Avatar" class="image">
@@ -163,7 +213,7 @@
               <!-- //End of 2nd image -->
 
               <!-- Start of 3rd image -->
-              <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <div class="featured-slideshow">
                   <div class="featured-flip3">
                     <img src="img/person5.jpg" alt="Avatar" class="image">
@@ -178,7 +228,7 @@
                     </div>
                   </div>
                   <div class="featured-flip33">
-                    <img src="img/person1.jpg" alt="Avatar" class="image">
+                    <img src="img/person6.jpg" alt="Avatar" class="image">
                     <div class="featured-overlay">
                       <h2 class="featured-heading">Sub Image 3</h2>
                       <div class="featured-chat-img">
@@ -194,10 +244,10 @@
               <!-- //End of 3rd image -->
 
               <!-- Start of 4th image -->
-              <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <div class="featured-slideshow1">
                   <div class="featured-flip4">
-                    <img src="img/person2.jpg" alt="Avatar" class="image">
+                    <img src="img/person7.jpg" alt="Avatar" class="image">
                     <div class="featured-overlay">
                       <h2 class="featured-heading">Image 4</h2>
                       <div class="featured-chat-img">
@@ -209,7 +259,7 @@
                     </div>
                   </div>
                   <div class="featured-flip44">
-                    <img src="img/person3.jpg" alt="Avatar" class="image">
+                    <img src="img/person8.jpg" alt="Avatar" class="image">
                     <div class="featured-overlay">
                       <h2 class="featured-heading">Sub Image 4</h2>
                       <div class="featured-chat-img">
@@ -225,10 +275,10 @@
               <!-- //End of 4th image -->
 
               <!-- Start of 5th image -->
-              <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <div class="featured-slideshow1">
                   <div class="featured-flip5">
-                    <img src="img/person4.jpg" alt="Avatar" class="image">
+                    <img src="img/person8.jpg" alt="Avatar" class="image">
                     <div class="featured-overlay">
                       <h2 class="featured-heading">Image 5</h2>
                       <div class="featured-chat-img">
@@ -240,7 +290,7 @@
                     </div>
                   </div>
                   <div class="featured-flip55">
-                    <img src="img/person5.jpg" alt="Avatar" class="image">
+                    <img src="img/person7.jpg" alt="Avatar" class="image">
                     <div class="featured-overlay">
                       <h2 class="featured-heading">Sub Image 5</h2>
                       <div class="featured-chat-img">
@@ -256,10 +306,10 @@
               <!-- //End of 5th image -->
 
               <!-- Start of 6th image -->
-              <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <div class="featured-slideshow">
                   <div class="featured-flip6">
-                    <img src="img/person1.jpg" alt="Avatar" class="image">
+                    <img src="img/person6.jpg" alt="Avatar" class="image">
                     <div class="featured-overlay">
                       <h2 class="featured-heading">Image 6</h2>
                       <div class="featured-chat-img">
@@ -271,7 +321,7 @@
                     </div>
                   </div>
                   <div class="featured-flip66">
-                    <img src="img/person2.jpg" alt="Avatar" class="image">
+                    <img src="img/person5.jpg" alt="Avatar" class="image">
                     <div class="featured-overlay">
                       <h2 class="featured-heading">Sub Image 6</h2>
                       <div class="featured-chat-img">
@@ -287,10 +337,10 @@
               <!-- //End of 6th image -->
 
               <!-- Start of 7th image -->
-              <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <div class="featured-slideshow1">
                   <div class="featured-flip7">
-                    <img src="img/person3.jpg" alt="Avatar" class="image">
+                    <img src="img/person4.jpg" alt="Avatar" class="image">
                     <div class="featured-overlay">
                       <h2 class="featured-heading">Image 7</h2>
                       <div class="featured-chat-img">
@@ -302,7 +352,7 @@
                     </div>
                   </div>
                   <div class="featured-flip77">
-                    <img src="img/person4.jpg" alt="Avatar" class="image">
+                    <img src="img/person3.jpg" alt="Avatar" class="image">
                     <div class="featured-overlay">
                       <h2 class="featured-heading">Sub Image 7</h2>
                       <div class="featured-chat-img">
@@ -318,10 +368,10 @@
               <!-- //End of 7th image -->
 
               <!-- Start of 8th image -->
-              <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <div class="featured-slideshow">
                   <div class="featured-flip8">
-                    <img src="img/person5.jpg" alt="Avatar" class="image">
+                    <img src="img/person2.jpg" alt="Avatar" class="image">
                     <div class="featured-overlay">
                       <h2 class="featured-heading">Image 8</h2>
                       <div class="featured-chat-img">
@@ -429,7 +479,20 @@
       </div> -->
       <!-- Chat Box Ends here -->
 
-  @include('partials.home_footer')
+      <footer class="inner-footer">
+        <p>&copy; Releasur 2018. All Rights Reserved.</p>
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <a href="#">Privacy</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#">Terms</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#">FAQ</a>
+          </li>
+        </ul>
+      </footer>
     
     <!-- Javascript
     ================================================== -->

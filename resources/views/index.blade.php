@@ -1,88 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Welcome To Releasur</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" type="image/x-icon" href="img/favicon.png" />
 
-    <link rel="stylesheet" href="css/custom-bootstrap.min.css">
-    <link rel="stylesheet" href="css/simple-line-icons/css/simple-line-icons.css">
-    <link rel="stylesheet" href="css/lato.css">
-    <link rel="stylesheet" href="css/catamaran.css">
-    <link rel="stylesheet" href="css/muli.css">
-    <link rel="stylesheet" href="css/device-mockups.min.css">
-    <link rel="stylesheet" href="css/new-age.min.css">
-    <link rel="stylesheet" href="css/style.css">
-
-  </head>
+  @include('partials.header')
 
   <body id="page-top">
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">
-          <img src="img/logo.png" width="146" alt="">
+        <a class="nav navbar-brand js-scroll-trigger" href="#page-top">
+          <img src="{{asset('img/logo.png')}}" width="146" alt="">
         </a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fas fa-bars"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about_us">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#what_we_do">What We Do</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#featured_artist">Featured Artist</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="{{route('login')}}">Login</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="{{route('register')}}">Signup</a>
-            </li>
-          </ul>
-        </div>
-        @if($errors->any())
-          <h4>{{$errors->first()}}</h4>
-        @endif
+        @include('partials.menu_bar')
       </div>
     </nav>
 
     <header class="masthead" id="home">
       <div class="container h-100">
         <div class="row h-100">
-          <div class="col-lg-8 my-auto">
+          <div class="col-lg-8 col-md-6 col-sm-12 col-xs-12 my-auto">
             <div class="header-content">
-              @if(Session::has('ev_message'))
-                <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('ev_message') }}</p>
-              @endif
-              <h1>H1 The standard Lorem Ipsum</h1>
+              <h1>H1 The standard Lorem Ipsum</h1> 
               <h3 class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h3>
             </div>
-            <div class="badges">
-              <a class="badge-link" href="#">
-                <img src="{{asset('img/googleplay.png')}}" alt="Google Play">
+            <span>
+              <a href="#">
+                <img src="{{asset('img/googleplay.png')}}" class="img-responsive" alt="Google Play">
               </a>
-              <a class="badge-link" href="#">
-                <img src="{{asset('img/appstore.png')}}" alt="App Store">
+            </span>
+            <span>
+              <a href="#">
+                <img src="{{asset('img/appstore.png')}}" class="img-responsive" alt="App Store">
               </a>
-            </div>
+            </span>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
             <div class="device-container">
               <div class="device-mockup iphone6_plus portrait white">
                 <div class="device">
@@ -90,27 +46,27 @@
                     <marquee direction = "up" bgcolor="#fff" scrolldelay="0">
                       <div class="newstape-content">
                         <div class="news-block">
-                          <h3><b>Lorem ipsum</b></h3>
-                          <small>13.04.2015</small>
-                          <p class="text-justify">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...
-                          </p>
-                          <div class="text-right">
-                            <a href="#">More</a>
-                          </div>
-                          <hr />
+                            <h3><b>Lorem ipsum</b></h3>
+                            <small>13.04.2015</small>
+                            <p class="text-justify">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...
+                            </p>
+                            <div class="text-right">
+                                <a href="#">More</a>
+                            </div>
+                            <hr />
                         </div>
 
                         <div class="news-block">
-                          <h3><b>Ut enim ad</b></h3>
-                          <small>13.04.2015</small>
-                          <p class="text-justify">
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...
-                          </p>
-                          <div class="text-right">
-                            <a href="#">More</a>
-                          </div>
-                          <hr />
+                            <h3><b>Ut enim ad</b></h3>
+                            <small>13.04.2015</small>
+                            <p class="text-justify">
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...
+                            </p>
+                            <div class="text-right">
+                                <a href="#">More</a>
+                            </div>
+                            <hr />
                         </div>
                       </div>
                     </marquee>
@@ -148,7 +104,7 @@
           <hr>
         </div>
         <div class="row">
-          <div class="col-lg-4 my-auto">
+          <div class="col-lg-4">
             <div class="device-container">
               <div class="device-mockup iphone6_plus portrait white">
                 <div class="device">
@@ -162,7 +118,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-8 my-auto">
+          <div class="col-lg-8">
             <div class="container-fluid">
               <div class="row">
                 <div class="col-lg-6">
@@ -324,7 +280,7 @@
             </div>
           </div>
           <!-- //End of 6th image -->
-
+          
           <!-- Start of 7th image -->
           <div class="col-lg-3 col-sm-6">
             <div class="slideshow1">
@@ -399,30 +355,15 @@
       </div>
     </section>
 
-    <footer>
-      <div class="container">
-        <p>&copy; Releasur 2018. All Rights Reserved.</p>
-        <ul class="list-inline">
-          <li class="list-inline-item">
-            <a href="#">Privacy</a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#">Terms</a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#">FAQ</a>
-          </li>
-        </ul>
-      </div>
-    </footer>
+    @include('partials.footer')
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/new-age.min.js"></script>
-    <script src="js/form-main.js"></script>
+    <script src="{{asset('js/jquery.min.js')}}"></script>
+    <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('js/jquery.easing.min.js')}}"></script>
+    <script src="{{asset('js/new-age.min.js')}}"></script>
+    <script src="{{asset('js/form-main.js')}}"></script>
 
-    <script src="js/jquery.cycle.all.js"></script>
+    <script src="{{asset('js/jquery.cycle.all.js')}}"></script>
 
     <script>
       $(function() {

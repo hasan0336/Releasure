@@ -151,7 +151,7 @@
         <div class="col-sm-10 col-md-10 col-lg-10">
           <div class="col-sm-12 col-md-12 col-lg-12">
 
-              <div class="col-sm-3 col-md-3 col-lg-3">
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <div class="purchase-box">
                   <img src="img/art-gallery.jpg" class="img-responsive purchase-img">
                   <button class="btn btn-default release-btn">RELEASE</button>
@@ -166,10 +166,8 @@
                 </div>
               </div><!--/span-->
 
-              <div class="col-sm-3 col-md-3 col-lg-3">
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <div class="purchase-box">
-                  <img src="img/art-gallery.jpg" class="img-responsive purchase-img">
-                  <button class="btn btn-default release-btn">RELEASE</button>
                   <h3>John Doe
                     <span>
                       <img src="img/user2-160x160.jpg" class="img-circle pull-right img-responsive" alt="User Image">
@@ -181,7 +179,7 @@
                 </div>
               </div><!--/span--> 
 
-              <div class="col-sm-3 col-md-3 col-lg-3">
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <div class="purchase-box">
                   <img src="img/art-gallery.jpg" class="img-responsive purchase-img">
                   <button class="btn btn-default release-btn">RELEASE</button>
@@ -196,7 +194,7 @@
                 </div>
               </div>
 
-              <div class="col-sm-3 col-md-3 col-lg-3">
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <div class="purchase-box">
                   <img src="img/art-gallery.jpg" class="img-responsive purchase-img">
                   <button class="btn btn-default release-btn">RELEASE</button>
@@ -211,7 +209,7 @@
                 </div>
               </div><!--/span-->
 
-              <div class="col-sm-3 col-md-3 col-lg-3">
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <div class="purchase-box">
                   <img src="img/art-gallery.jpg" class="img-responsive purchase-img">
                   <button class="btn btn-default release-btn">RELEASE</button>
@@ -226,7 +224,7 @@
                 </div>
               </div>
 
-              <div class="col-sm-3 col-md-3 col-lg-3">
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <div class="purchase-box">
                   <img src="img/art-gallery.jpg" class="img-responsive purchase-img">
                   <button class="btn btn-default release-btn">RELEASE</button>
@@ -241,10 +239,8 @@
                 </div>
               </div>
 
-              <div class="col-sm-3 col-md-3 col-lg-3">
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <div class="purchase-box">
-                  <img src="img/art-gallery.jpg" class="img-responsive purchase-img">
-                  <button class="btn btn-default release-btn">RELEASE</button>
                   <h3>John Doe 
                     <span>
                       <img src="img/user2-160x160.jpg" class="img-circle pull-right img-responsive" alt="User Image">
@@ -256,7 +252,7 @@
                 </div>
               </div>
 
-              <div class="col-sm-3 col-md-3 col-lg-3">
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <div class="purchase-box">
                   <img src="img/art-gallery.jpg" class="img-responsive purchase-img">
                   <button class="btn btn-default release-btn">RELEASE</button>

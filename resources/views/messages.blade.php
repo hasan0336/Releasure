@@ -152,9 +152,9 @@
 
               <div class="col-sm-12 col-md-12 col-lg-12">
 
-                <div class="col-sm-3 col-md-3 col-lg-3">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                   <div class="msg-box">
-                    <img src="img/person1.jpg" class="msg-img">
+                    <img src="img/person1.jpg" class="img-responsive msg-img">
                   </div>
                   <div class="msg-overlay">
                     <div class="msg-text">
@@ -168,9 +168,9 @@
                   </div>
                 </div>  
                 
-                <div class="col-sm-3 col-md-3 col-lg-3">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                   <div class="msg-box">
-                    <img src="img/person2.jpg" class="msg-img">
+                    <img src="img/person2.jpg" class="img-responsive msg-img">
                   </div>
                   <div class="msg-overlay">
                     <div class="msg-text">
@@ -184,9 +184,9 @@
                   </div>
                 </div>
                 
-                <div class="col-sm-3 col-md-3 col-lg-3">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                   <div class="msg-box">
-                    <img src="img/person3.jpg" class="msg-img">
+                    <img src="img/person3.jpg" class="img-responsive msg-img">
                   </div>
                   <div class="msg-overlay">
                     <div class="msg-text">
@@ -200,9 +200,9 @@
                   </div>
                 </div>
                 
-                <div class="col-sm-3 col-md-3 col-lg-3">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                   <div class="msg-box">
-                    <img src="img/person4.jpg" class="msg-img">
+                    <img src="img/person4.jpg" class="img-responsive msg-img">
                   </div>
                   <div class="msg-overlay">
                     <div class="msg-text">
@@ -216,9 +216,9 @@
                   </div>
                 </div>
 
-                <div class="col-sm-3 col-md-3 col-lg-3">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                   <div class="msg-box">
-                    <img src="img/person5.jpg" class="msg-img">
+                    <img src="img/person5.jpg" class="img-responsive msg-img">
                   </div>
                   <div class="msg-overlay">
                     <div class="msg-text">
@@ -232,9 +232,9 @@
                   </div>
                 </div>
 
-                <div class="col-sm-3 col-md-3 col-lg-3">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                   <div class="msg-box">
-                    <img src="img/person1.jpg" class="msg-img">
+                    <img src="img/person6.jpg" class="img-responsive msg-img">
                   </div>
                   <div class="msg-overlay">
                     <div class="msg-text">
@@ -248,9 +248,9 @@
                   </div>
                 </div>
 
-                <div class="col-sm-3 col-md-3 col-lg-3">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                   <div class="msg-box">
-                    <img src="img/person2.jpg" class="msg-img">
+                    <img src="img/person7.jpg" class="img-responsive msg-img">
                   </div>
                   <div class="msg-overlay">
                     <div class="msg-text">
@@ -264,9 +264,9 @@
                   </div>
                 </div>
 
-                <div class="col-sm-3 col-md-3 col-lg-3">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                   <div class="msg-box">
-                    <img src="img/person3.jpg" class="msg-img">
+                    <img src="img/person8.jpg" class="img-responsive msg-img">
                   </div>
                   <div class="msg-overlay">
                     <div class="msg-text">

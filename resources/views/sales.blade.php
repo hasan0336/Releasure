@@ -160,10 +160,10 @@
                   </thead>
                   <tbody>
                     <tr class="active">
-                      <td>Jan 1 2018 at 05:00pm</td>
-                      <td>Lorem ipsum dolor sit amet</td>
-                      <td>-</td>
-                      <td>50</td>
+                      <td><span class="glyphicon glyphicon-calendar">&emsp;</span>Jan 1 2018 at 05:00pm</td>
+                      <td><span class="glyphicon glyphicon-edit">&emsp;</span>Lorem ipsum dolor sit amet</td>
+                      <td><span class="glyphicon glyphicon-paperclip">&emsp;</span>-</td>
+                      <td><span class="glyphicon glyphicon-usd">&emsp;</span>50</td>
                       <td>
                         <span class="glyphicon glyphicon-chevron-down subrow-btn1"></span>
                       </td>
@@ -193,10 +193,10 @@
                       </td>
                     </tr>
                     <tr class="warning">
-                      <td>Jan 1 2018 at 05:00pm</td>
-                      <td>Lorem ipsum dolor sit amet</td>
-                      <td>-</td>
-                      <td>50</td>
+                      <td><span class="glyphicon glyphicon-calendar">&emsp;</span>Jan 1 2018 at 05:00pm</td>
+                      <td><span class="glyphicon glyphicon-edit">&emsp;</span>Lorem ipsum dolor sit amet</td>
+                      <td><span class="glyphicon glyphicon-paperclip">&emsp;</span>-</td>
+                      <td><span class="glyphicon glyphicon-usd">&emsp;</span>50</td>
                       <td><span class="glyphicon glyphicon-chevron-down subrow-btn2"></span></td>
                     </tr>
                     <tr class="subrow2">
@@ -223,10 +223,10 @@
                       </td>
                     </tr>
                     <tr class="active">
-                      <td>Jan 1 2018 at 05:00pm</td>
-                      <td>Lorem ipsum dolor sit amet</td>
-                      <td>-</td>
-                      <td>50</td>
+                      <td><span class="glyphicon glyphicon-calendar">&emsp;</span>Jan 1 2018 at 05:00pm</td>
+                      <td><span class="glyphicon glyphicon-edit">&emsp;</span>Lorem ipsum dolor sit amet</td>
+                      <td><span class="glyphicon glyphicon-paperclip">&emsp;</span>-</td>
+                      <td><span class="glyphicon glyphicon-usd">&emsp;</span>50</td>
                       <td><span class="glyphicon glyphicon-chevron-down subrow-btn3"></span></td>
                     </tr>
                     <tr class="subrow3">
@@ -253,10 +253,10 @@
                       </td>
                     </tr>
                     <tr class="warning">
-                      <td>Jan 1 2018 at 05:00pm</td>
-                      <td>Lorem ipsum dolor sit amet</td>
-                      <td>-</td>
-                      <td>50</td>
+                      <td><span class="glyphicon glyphicon-calendar">&emsp;</span>Jan 1 2018 at 05:00pm</td>
+                      <td><span class="glyphicon glyphicon-edit">&emsp;</span>Lorem ipsum dolor sit amet</td>
+                      <td><span class="glyphicon glyphicon-paperclip">&emsp;</span>-</td>
+                      <td><span class="glyphicon glyphicon-usd">&emsp;</span>50</td>
                       <td><span class="glyphicon glyphicon-chevron-down subrow-btn4"></span></td>
                     </tr>
                     <tr class="subrow4">
@@ -283,10 +283,10 @@
                       </td>
                     </tr>
                     <tr class="active">
-                      <td>Jan 1 2018 at 05:00pm</td>
-                      <td>Lorem ipsum dolor sit amet</td>
-                      <td>-</td>
-                      <td>50</td>
+                      <td><span class="glyphicon glyphicon-calendar">&emsp;</span>Jan 1 2018 at 05:00pm</td>
+                      <td><span class="glyphicon glyphicon-edit">&emsp;</span>Lorem ipsum dolor sit amet</td>
+                      <td><span class="glyphicon glyphicon-paperclip">&emsp;</span>-</td>
+                      <td><span class="glyphicon glyphicon-usd">&emsp;</span>50</td>
                       <td><span class="glyphicon glyphicon-chevron-down subrow-btn5"></span></td>
                     </tr>
                     <tr class="subrow5">
@@ -313,10 +313,10 @@
                       </td>
                     </tr>
                     <tr class="warning">
-                      <td>Jan 1 2018 at 05:00pm</td>
-                      <td>Lorem ipsum dolor sit amet</td>
-                      <td>-</td>
-                      <td>50</td>
+                      <td><span class="glyphicon glyphicon-calendar">&emsp;</span>Jan 1 2018 at 05:00pm</td>
+                      <td><span class="glyphicon glyphicon-edit">&emsp;</span>Lorem ipsum dolor sit amet</td>
+                      <td><span class="glyphicon glyphicon-paperclip">&emsp;</span>-</td>
+                      <td><span class="glyphicon glyphicon-usd">&emsp;</span>50</td>
                       <td><span class="glyphicon glyphicon-chevron-down subrow-btn6"></span></td>
                     </tr>
                     <tr class="subrow6">
@@ -343,10 +343,10 @@
                       </td>
                     </tr>
                     <tr class="active">
-                      <td>Jan 1 2018 at 05:00pm</td>
-                      <td>Lorem ipsum dolor sit amet</td>
-                      <td>-</td>
-                      <td>50</td>
+                      <td><span class="glyphicon glyphicon-calendar">&emsp;</span>Jan 1 2018 at 05:00pm</td>
+                      <td><span class="glyphicon glyphicon-edit">&emsp;</span>Lorem ipsum dolor sit amet</td>
+                      <td><span class="glyphicon glyphicon-paperclip">&emsp;</span>-</td>
+                      <td><span class="glyphicon glyphicon-usd">&emsp;</span>50</td>
                       <td><span class="glyphicon glyphicon-chevron-down subrow-btn7"></span></td>
                     </tr>
                     <tr class="subrow7">
@@ -373,10 +373,10 @@
                       </td>
                     </tr>
                     <tr class="warning">
-                      <td>Jan 1 2018 at 05:00pm</td>
-                      <td>Lorem ipsum dolor sit amet</td>
-                      <td>-</td>
-                      <td>50</td>
+                      <td><span class="glyphicon glyphicon-calendar">&emsp;</span>Jan 1 2018 at 05:00pm</td>
+                      <td><span class="glyphicon glyphicon-edit">&emsp;</span>Lorem ipsum dolor sit amet</td>
+                      <td><span class="glyphicon glyphicon-paperclip">&emsp;</span>-</td>
+                      <td><span class="glyphicon glyphicon-usd">&emsp;</span>50</td>
                       <td><span class="glyphicon glyphicon-chevron-down subrow-btn8"></span></td>
                     </tr>
                     <tr class="subrow8">
@@ -403,10 +403,10 @@
                       </td>
                     </tr>
                     <tr class="active">
-                      <td>Jan 1 2018 at 05:00pm</td>
-                      <td>Lorem ipsum dolor sit amet</td>
-                      <td>-</td>
-                      <td>50</td>
+                      <td><span class="glyphicon glyphicon-calendar">&emsp;</span>Jan 1 2018 at 05:00pm</td>
+                      <td><span class="glyphicon glyphicon-edit">&emsp;</span>Lorem ipsum dolor sit amet</td>
+                      <td><span class="glyphicon glyphicon-paperclip">&emsp;</span>-</td>
+                      <td><span class="glyphicon glyphicon-usd">&emsp;</span>50</td>
                       <td><span class="glyphicon glyphicon-chevron-down subrow-btn9"></span></td>
                     </tr>
                     <tr class="subrow9">
@@ -433,10 +433,10 @@
                       </td>
                     </tr>
                     <tr class="warning">
-                      <td>Jan 1 2018 at 05:00pm</td>
-                      <td>Lorem ipsum dolor sit amet</td>
-                      <td>-</td>
-                      <td>50</td>
+                      <td><span class="glyphicon glyphicon-calendar">&emsp;</span>Jan 1 2018 at 05:00pm</td>
+                      <td><span class="glyphicon glyphicon-edit">&emsp;</span>Lorem ipsum dolor sit amet</td>
+                      <td><span class="glyphicon glyphicon-paperclip">&emsp;</span>-</td>
+                      <td><span class="glyphicon glyphicon-usd">&emsp;</span>50</td>
                       <td><span class="glyphicon glyphicon-chevron-down subrow-btn10"></span></td>
                     </tr>
                     <tr class="subrow10">
