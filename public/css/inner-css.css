@@ -85,6 +85,41 @@ input[type=search] {
   color: transparent;
 }
 
+/* Demo 3 */
+#demo-3 input[type=search] {
+  background: #ededed url(../img/dollar-icon.png) no-repeat 0 center;
+  width: 0;
+  height:18px;
+  cursor: pointer;
+  padding: 0 20px 0 0;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.demo-3{
+  display: inline;
+}
+
+#demo-3 input[type=search]:hover {
+  background-color: transparent;
+  height:18px;
+}
+
+#demo-3 input[type=search]:focus {
+  width: 20px;
+  height:18px;
+  padding-left: 32px;
+  color: #000;
+  background-color: #fff;
+  cursor: auto;
+}
+#demo-3 input:-moz-placeholder {
+  color: transparent;
+}
+#demo-3 input::-webkit-input-placeholder {
+  color: transparent;
+}
+
 .left-sidebar{
   /*background-image: linear-gradient(to bottom, #222222, #111111);*/
   background-color: #333333;  
@@ -179,7 +214,7 @@ input[type=search] {
 
 .user-header {
   background-color: #333;
-  height: 175px;
+  height: 190px;
   padding: 10px;
   text-align: center;
 }
@@ -510,7 +545,19 @@ h3{
 .emoji-icon{
   width: 20px;
   border-radius: 50%;
-  margin-right: 10px;
+}
+
+.m-r-5{
+  margin-right: 5px;
+}
+
+.home-attachment{
+  width: 0.1px; 
+  height: 0.1px; 
+  opacity: 0; 
+  overflow: hidden; 
+  position: absolute; 
+  z-index: -1; 
 }
 
 .timeline-box{

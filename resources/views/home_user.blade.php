@@ -136,8 +136,14 @@
 
               <div class="post-editor-btn">
                 <div class="pull-left">
-                  <img src="{{asset('img/smile.png')}}" class="emoji-icon" id="btn">
-                  <img src="{{asset('img/attachment.png')}}" width="15">
+                  <img src="{{asset('img/smile.png')}}" class="emoji-icon m-r-5" id="btn">
+                  <input type="file" class="home-attachment">
+                  <label for="home-attachment">
+                    <input type="file" id="home-attachment" class="home-attachment">
+                    <img src="{{asset('img/attachment.png')}}" width="15" class="m-r-5">
+                  </label>
+                  <form id="demo-3" class="demo-3"><input type="search"></form>
+                  <!-- <img src="{{asset('img/dollar.png')}}" width="20"> -->
                 </div>
                 <div class="pull-right">
                   <input type="submit" class="btn btn-success btn-xs post-btn" value="Post">
@@ -369,6 +375,41 @@
         placeholder: ":{alias}:"
       }]
     }); 
+
+    /*
+  By Osvaldas Valutis, www.osvaldas.info
+  Available for use under the MIT License
+*/
+
+'use strict';
+
+;( function ( document, window, index )
+{
+  var inputs = document.querySelectorAll( '.inputfile' );
+  Array.prototype.forEach.call( inputs, function( input )
+  {
+    var label  = input.nextElementSibling,
+      labelVal = label.innerHTML;
+
+    input.addEventListener( 'change', function( e )
+    {
+      var fileName = '';
+      if( this.files && this.files.length > 1 )
+        fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+      else
+        fileName = e.target.value.split( '\\' ).pop();
+
+      if( fileName )
+        label.querySelector( 'span' ).innerHTML = fileName;
+      else
+        label.innerHTML = labelVal;
+    });
+
+    // Firefox bug fix
+    input.addEventListener( 'focus', function(){ input.classList.add( 'has-focus' ); });
+    input.addEventListener( 'blur', function(){ input.classList.remove( 'has-focus' ); });
+  });
+}( document, window, 0 ));
   </script>
 
   </body>

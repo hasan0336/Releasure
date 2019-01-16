@@ -1,6 +1,6 @@
 <footer style="position:fixed; bottom: 0; width: 100%;">
     <div class="container">
-        <p>&copy; Releasur 2018. All Rights Reserved.</p>
+        <p>&copy; Releasur 2019. All Rights Reserved.</p>
         <ul class="list-inline">
             <li class="list-inline-item">
                 <a href="#">Privacy</a>
