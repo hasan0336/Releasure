@@ -7,6 +7,7 @@
         <li><a href="index.html#contact">Contact</a></li>
         <li>
             <a class="dropdown-toggle" data-toggle="dropdown">
+
                 <div class="hidden-xs">{{Auth::user()->name}}&emsp;
                     <img src="{{url('/uploads/'.Auth::user()->profile_picture)}}" class="img-circle" width="25" height="25" alt="User Image">
 </div>

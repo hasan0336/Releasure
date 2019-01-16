@@ -49,7 +49,7 @@
                     &nbsp; Sales
                   </a></li>
                 <li>
-                  <a href="featured_artist.html">
+                  <a href="{{route('featured_artist')}}">
                     <i class="glyphicon glyphicon-star-empty"></i>
                     &nbsp; Featured Artist
                   </a>
@@ -126,11 +126,12 @@
         <!-- Home Page Middle Section Starts-->
         <div class="col-sm-8 col-md-8 col-lg-8">
           <!-- Post editor starts here-->
+          <form id="form_data">
+            {{csrf_field()}}
           <div class="col-sm-12 col-md-12 col-lg-12">
             <div class="post-editor-background">
-
               <div class="post-editor">
-                <textarea class="textarea-editor" rows="5" id="editor" placeholder="Type your text here..."></textarea>
+                <textarea class="textarea-editor" rows="5" id="editor" name="desc" placeholder="Type your text here..."></textarea>
               </div>
 
               <div class="post-editor-btn">
@@ -139,11 +140,13 @@
                   <img src="{{asset('img/attachment.png')}}" width="15">
                 </div>
                 <div class="pull-right">
-                  <a type="submit" class="btn btn-success btn-xs post-btn">Post</a>
+                  <input type="submit" class="btn btn-success btn-xs post-btn" value="Post">
+                  {{--<a type="submit" class="btn btn-success btn-xs post-btn">Post</a>--}}
                 </div>
               </div>
             </div>
           </div>
+          </form>
           <!-- Post editor ends here-->
 
           <!-- Timeline starts here-->
@@ -151,57 +154,65 @@
             <ul class="timeline">
               <li>
                 <div class="tldate">
-                  Apr 2014
+                  <?php $current_date = date('Y'); ?>
+                  {{ $current_date }}
                 </div>
               </li>
-              
-              <li>
-                <div class="tl-circ"></div>
-                <div class="timeline-panel">
-                  <img src="{{asset('img/art-gallery.jpg')}}" class="img-responsive home-img">
-                  <button class="btn btn-default buynow-btn">BUY NOW</button>
-                  <h3>John Doe
-                    <span>
-                      <img src="{{asset('img/user2-160x160.jpg')}}" class="img-responsive img-circle pull-right" alt="User Image">
+
+              <li class="listing_data" id="listings_data">
+
+              </li>
+              <?php $odd = array();
+                    $even = array(); ?>
+              {{--{{dd($posts)}}--}}
+
+                  @foreach($posts as $k => $post)
+                    @if($post->year == $current_date)
+                      @if($k % 2 == 1)
+                        <li class="timeline-inverted">
+                          <div class="tl-circ"></div>
+                          <div class="timeline-panel">
+                            @if(isset($post->attachment))
+                              <img src="{{$post->attachment}}" class="img-responsive home-img">
+                              <button class="btn btn-default buynow-btn">BUY NOW</button>
+                            @endif
+                            <h3>{{$post->name}}
+                              <span>
+                          <img src="{{url('/uploads/'.$post->profile_picture)}}" class="img-circle pull-right" width="35" height="35" alt="User Image">
+                        </span>
+
+                            </h3>
+                            <p class="home-text">{{$post->description}}</p>
+                            <p><hr style="border-top: 1px solid #000000; margin:0;"></p>
+                            <p class="home-text"><i class="glyphicon glyphicon-calendar"></i>{{$post->created_at}}<span class="pull-right"><img src="{{asset('img/chat.png')}}" class="img-responsive" width="20"></span></p>
+                          </div>
+                        </li>
+                      @endif
+                      @if($k % 2 == 0)
+                        <li>
+                          <div class="tl-circ"></div>
+                          <div class="timeline-panel">
+                            @if(isset($post->attachment))
+                              <img src="{{$post->attachment}}" class="img-responsive home-img">
+                              <button class="btn btn-default buynow-btn">BUY NOW</button>
+                            @endif
+                            <h3>{{$post->name}}
+                              <span>
+                      <img src="{{url('/uploads/'.$post->profile_picture)}}" class="img-circle pull-right" width="35"  alt="User Image">
                     </span>
-                  </h3>
-                  <p class="home-text">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-                  <p><hr style="border-top: 1px solid #000000; margin:0;"></p>
-                  <p class="home-text"><i class="glyphicon glyphicon-calendar"></i> Jan 01 2018 at 5:00pm <span class="pull-right"><img src="{{asset('img/chat.png')}}" class="img-responsive" width="20"></span></p>
-                </div>
-              </li>
-              
-              <li class="timeline-inverted">
-                <div class="tl-circ"></div>
-                <div class="timeline-panel">
-                  <h3>John Doe
-                    <span>
-                      <img src="{{asset('img/user2-160x160.jpg')}}" class="img-circle pull-right img-responsive" alt="User Image">
-                    </span>
-                  </h3>
-                  <p class="home-text">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-                  <p><hr style="border-top: 1px solid #000000; margin:0;"></p>
-                  <p class="home-text"><i class="glyphicon glyphicon-calendar"></i> Jan 01 2018 at 5:00pm <span class="pull-right"><img src="{{asset('img/chat.png')}}" class="img-responsive" width="20"></span></p>
-                </div>
-              </li>
+                            </h3>
+                            <p class="home-text">{{$post->description}}</p>
+                            <p><hr style="border-top: 1px solid #000000; margin:0;"></p>
+                            <p class="home-text"><i class="glyphicon glyphicon-calendar"></i>{{$post->created_at}}<span class="pull-right"><img src="{{asset('img/chat.png')}}" class="img-responsive" width="20"></span></p>
+                          </div>
+                        </li>
+                      @endif
+                    @endif
+              @endforeach
               
               <li><div class="tldate">Mar 2014</div></li>
               
-              <li>
-                <div class="tl-circ"></div>
-                <div class="timeline-panel">
-                  <img src="{{asset('img/art-gallery.jpg')}}" class="img-responsive home-img">
-                  <button class="btn btn-default buynow-btn">BUY NOW</button>
-                  <h3>John Doe
-                    <span>
-                      <img src="{{asset('img/user2-160x160.jpg')}}" class="img-circle pull-right img-responsive" alt="User Image">
-                    </span>
-                  </h3>
-                  <p class="home-text">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-                  <p><hr style="border-top: 1px solid #000000; margin:0;"></p>
-                  <p class="home-text"><i class="glyphicon glyphicon-calendar"></i> Jan 01 2018 at 5:00pm <span class="pull-right"><img src="{{asset('img/chat.png')}}" class="img-responsive" width="20"></span></p>
-                </div>
-              </li>
+
               <li class="timeline-inverted">
                 <div class="tl-circ"></div>
                 <div class="timeline-panel">
@@ -307,6 +318,36 @@
       $(".submenu").hide();
       $(".setting-btn").click(function(){
         $(".submenu").slideToggle("slow")});
+    });
+
+    const xCsrfToken = "{{ csrf_token() }}";
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': xCsrfToken
+        }
+    });
+
+    $('#form_data').submit(function(e){
+        e.preventDefault();
+        var desc = $('#editor').val();
+//        console.log(desc);
+//        alert(desc);
+        $.ajax({
+            type : 'POST',
+            url : 'post_data',
+            dataType: "json",
+            data : {
+                desc: desc
+            },
+            success: function(data){
+                if(data.listing){
+                    $('.listing_data').prepend(data.listing);
+                }
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert(thrownError);
+            }
+        });
     });
   </script>
 
