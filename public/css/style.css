@@ -270,7 +270,7 @@ marquee {
   margin-bottom: 0;
   font-size: 14px;
   line-height: 20px;
-  color: #333333;
+  color: #6c757d;
   text-align: center;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
   vertical-align: middle;
@@ -299,7 +299,6 @@ marquee {
 .control-fileupload:before {
   color: #6c757d;
   background-color: #e6e6e6;
-  color: #333333;
   text-decoration: none;
   background-position: 0 -15px;
   transition: background-position 0.2s ease-out;
@@ -308,7 +307,6 @@ marquee {
 .control-fileupload:hover, .control-fileupload:focus {
   color: #6c757d;
   background-color: #f3f3f3;
-  color: #333333;
   text-decoration: none;
   background-position: 0 -15px;
   transition: background-position 0.2s ease-out;
