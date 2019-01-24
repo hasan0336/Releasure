@@ -68,4 +68,20 @@ class UserController extends Controller
             return redirect()->back();
         }
     }
+
+    public function update_user_profile(Request $request)
+    {
+//        dd($request->all());
+        $user_array = array('name'=>$request->input('user_name'),'contact'=>$request->input('contact'),'address'=>$request->input('address'));
+        $UpdateDetails = User::where('user_id',Auth::user()->user_id)->update($user_array);
+        if($UpdateDetails == 1)
+        {
+            Session::flash('update_profile', 'Your profile is updated');
+        }
+        else
+        {
+            Session::flash('not_update_profile', 'Profile is not updated');
+        }
+        return redirect()->back();
+    }
 }

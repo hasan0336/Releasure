@@ -14,9 +14,40 @@ class PostController extends Controller
 {
     public function post_data(Request $request)
     {
+
+//        dd($request->all());
         $desc = $request->input('desc');
-        $post_arr = array('description'=> $desc, 'user_id'=> Auth::user()->user_id);
+        $post_arr = array();
+        if($request->file() != null)
+        {
+            $attachment_file = $request->file('attachment');
+            $attachment =  time().$request->file('attachment')->getClientOriginalName();
+            $attachment_ext = $request->file('attachment')->getClientOriginalExtension();
+            $post['attachment'] = $attachment;
+            $post['attachment_type'] = $attachment_ext;
+            $destinationPath = public_path('/images/attachment_images');
+            $attachment_file->move($destinationPath, $attachment);
+        }
+        else
+        {
+            $attachment_file = 'null';
+            $attachment = 'null';
+            $attachment_ext = 'null';
+        }
+
+
+        $price = $request->input('price');
+        $post_arr['description'] = $desc;
+        $post_arr['user_id'] = Auth::user()->user_id;
+        $post_arr['price'] = $price;
+
+//        dd($post_arr);
+
+
+
+        $post_arr = array('description'=> $desc, 'user_id'=> Auth::user()->user_id, 'attachment'=>$attachment, 'attachment_type'=>$attachment_ext,'price'=>$price);
         $post = DB::table('posts')->insert($post_arr);
+
 
         if(request()->ajax())
         {
@@ -26,16 +57,31 @@ class PostController extends Controller
                 ->join('users','posts.user_id','=','users.user_id')
                 ->where('post_id',$id)
                 ->first();
+            $show_image = '';
+            if(isset($post_items->attachment) && $post_items->attachment != 'null')
+            {
+                $show_image = '<img src="'.URL::to('images\attachment_images/'.$post_items->attachment).'" class="img-responsive home-img">
+                      <button class="btn btn-default buynow-btn">BUY NOW</button>';
+            }
+            else
+            {
+                $show_image = '';
+            }
+
+
 
             $response['listing'] = '
+                    <li>
+                  <div class="tldate">
+                      Now
+                  </div>
+                </li>
                     <div class="tl-circ"></div>
                     <div class="timeline-panel">
-                    
-                      <img src="'.URL::to('img/art-gallery.jpg').'" class="img-responsive home-img">
-                      <button class="btn btn-default buynow-btn">BUY NOW</button>
+                      '.$show_image.'
                       <h3>'.$post_items->name.'
                         <span>
-                          <img src="'.URL::to('/uploads/'.$post_items->profile_picture).'" class="img-responsive img-circle pull-right" alt="User Image">
+                          <img src="'.URL::to('/uploads/'.$post_items->profile_picture).'"  width="35" height="35" class="img-responsive img-circle pull-right" alt="User Image">
                         </span>
                       </h3>
                       <p class="home-text"> '.$post_items->description.' </p>

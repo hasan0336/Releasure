@@ -31,44 +31,7 @@
             <img src="img/logo.png" class="img-responsive img-rounded" alt="Releasur Logo">
           </a>
         </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#about_us">About Us</a></li>
-            <li><a href="index.html#what_we_do">What We Do</a></li>
-            <li><a href="index.html#featured_artist">Featured Artist</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
-            <li>
-              <a class="dropdown-toggle" data-toggle="dropdown">
-                <div class="hidden-xs">Administrator&emsp;
-                  <img src="img/profile_pic.jpg" class="img-circle" alt="User Image">
-                </div>
-              </a>
-
-              <ul class="dropdown-menu">
-                <li class="user-header">
-                  <img src="img/user2.jpg" class="img-circle img-responsive" style="margin:0 auto" alt="User Image">
-                  <p>Administrator<small>admin@technado.co</small></p>
-                </li>
-
-                 <li class="user-footer">
-                   <div class="pull-left">
-                     <a href="#" data-toggle="modal" data-target="#myModal_header" class="btn btn-default btn-flat">Profile</a>
-                   </div>
-                   <div class="pull-right">
-                     <a href="#" class="btn btn-default btn-flat">Sign out</a>
-                   </div>
-                 </li>
-               </ul>
-            </li>
-            <li>
-              <form id="demo-2" class="search-bar-setting">
-                <input type="search">
-              </form>
-            </li>
-          </ul>
-        </div>
-      </div>
+      @include('partials.home_menu_bar')
     </nav>
 
       <div class="container margin-top20">
@@ -82,71 +45,7 @@
                 <span class="icon-bar"></span>                     
               </button>
             </div>
-            <div class="collapse navbar-collapse padding0" id="sideNavbar">
-              <div class="well sidebar-nav left-sidebar" data-spy="affix" data-offset-top="110">
-              <ul class="nav nav-list">
-                <li>
-                  <a href="home.html">
-                    <i class="glyphicon glyphicon-home"></i>
-                    &nbsp; Home
-                  </a>
-                </li>
-                <li>
-                  <a href="sales.html">
-                    <i class="glyphicon glyphicon-stats"></i>
-                    &nbsp; Sales
-                  </a></li>
-                <li>
-                  <a href="featured_artist.html">
-                    <i class="glyphicon glyphicon-star-empty"></i>
-                    &nbsp; Featured Artist
-                  </a>
-                </li>
-                <li>
-                  <a href="purchases.html">
-                    <i class="glyphicon glyphicon-shopping-cart"></i>
-                    &nbsp; Purchases
-                  </a>
-                </li>
-                <li class="active">
-                  <a href="messages.html">
-                    <i class="glyphicon glyphicon-envelope"></i>
-                    &nbsp; Messages
-                  </a>
-                </li>
-                <li>
-                  <a href="payment.html">
-                    <i class="glyphicon glyphicon-credit-card"></i>
-                    &nbsp; Payment
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="glyphicon glyphicon-cog"></i>
-                    &nbsp; Settings
-                    <span class="glyphicon glyphicon-chevron-down setting-btn pull-right"></span>
-                  </a>
-                </li>
-                <li class="submenu">
-                  <a href="#">
-                    <i class="glyphicon glyphicon-record"></i>
-                    &nbsp; Term & Condition
-                  </a>
-
-                  <a href="#">
-                    <i class="glyphicon glyphicon-record"></i>
-                    &nbsp; Privacy Policy
-                  </a>
-
-                  <a href="#">
-                    <i class="glyphicon glyphicon-record"></i>
-                    &nbsp; FAQs
-                  </a>
-                </li>
-              </ul>
-            </div><!--/.well -->
-          </div><!--/.well -->
-          </div><!--/span-->
+            @include('partials.home_side_bar')
 
           <div class="col-sm-10 col-md-10 col-lg-10">
 

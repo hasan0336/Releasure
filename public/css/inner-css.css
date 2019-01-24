@@ -491,6 +491,14 @@ h3{
   max-width: 100%;
   border-radius: 10px;
   padding: 10px;
+  background-color: #fff;
+  margin-bottom: 10px;
+  height: 112px;
+}
+
+[contentEditable=true]:empty:not(:focus):before
+{
+  content:attr(data-text)
 }
 
 .post-editor-background{

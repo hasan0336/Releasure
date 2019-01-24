@@ -1,10 +1,10 @@
 <div class="collapse navbar-collapse" id="myNavbar">
     <ul class="nav navbar-nav navbar-right">
-        <li><a href="{{route('home')}}">Home</a></li>
-        <li><a href="index.html#about_us">About Us</a></li>
-        <li><a href="index.html#what_we_do">What We Do</a></li>
-        <li><a href="{{route('featured_artist')}}">Featured Artist</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="{{route('index')}}">Home</a></li>
+        <li><a href="{{route('index')}}#about_us">About Us</a></li>
+        <li><a href="{{route('index')}}#what_we_do">What We Do</a></li>
+        <li><a href="{{route('index')}}#featured_artist">Featured Artist</a></li>
+        <li><a href="{{route('index')}}#contact">Contact</a></li>
         <li>
             <a class="dropdown-toggle" data-toggle="dropdown">
 
@@ -48,22 +48,23 @@
           <h4 class="modal-title">Edit Profile</h4>
         </div>
         <div class="modal-body">
-          <form action="/action_page.php">
+          <form action="{{route('update_user_profile')}}" method="post">
+              {{csrf_field()}}
           <div class="form-group">
             <label for="user_name">Name:</label>
-            <input type="text" class="form-control" id="user_name" placeholder="Name">
+            <input type="text" class="form-control" id="user_name" name="user_name" placeholder="Name">
           </div>
           <div class="form-group">
             <label for="user_contact">Contact No:</label>
-            <input type="text" class="form-control" id="user_contact" placeholder="Contact No">
+            <input type="text" class="form-control" id="user_contact" name="contact" placeholder="Contact No">
           </div>
           <div class="form-group">
             <label for="user_address">Address:</label>
-            <input type="text" class="form-control" id="user_address" placeholder="Address">
+            <input type="text" class="form-control" id="user_address" name="address" placeholder="Address">
           </div>
         </div>
         <div class="modal-footer">
-            <button type="submit" class="btn btn-primary">Update</button>
+            <input type="submit" class="btn btn-primary" value="Update">
         </div>
         </form>
       </div>
