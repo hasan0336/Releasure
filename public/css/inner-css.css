@@ -89,7 +89,7 @@ input[type=search] {
 #demo-3 input[type=search] {
   background: #ededed url(../img/dollar-icon.png) no-repeat 0 center;
   width: 0;
-  height:18px;
+  height:21px;
   cursor: pointer;
   padding: 0 20px 0 0;
   background-color: transparent;
@@ -102,7 +102,7 @@ input[type=search] {
 
 #demo-3 input[type=search]:hover {
   background-color: transparent;
-  height:18px;
+  height:21px;
 }
 
 #demo-3 input[type=search]:focus {
