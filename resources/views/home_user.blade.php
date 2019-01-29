@@ -75,6 +75,8 @@
           <div class="col-sm-12 col-md-12 col-lg-12">
             <div class="post-editor-background">
               <div class="post-editor">
+                  {{--<div id="editor" class="textarea-editor" contentEditable=true data-text="Enter text here"></div>--}}
+
                 <textarea class="textarea-editor" rows="5" id="editor" name="desc" placeholder="Type your text here..."></textarea>
               </div>
 
@@ -277,7 +279,7 @@
             <!-- end rest of month date -->
             </ul>
             <input type="hidden" id="year" value="{{ $current_year }}" />
-            <input type="hidden" id="month" value="{{ $current_month }}" />
+            <input type="hidden" id="month" value="<?=  date('m') ?>" />
           </div>
           <!-- Timeline Ends here -->
         </div>
@@ -330,6 +332,7 @@
 
     $('#form_data').submit(function(e){
         e.preventDefault();
+
 //        var desc = $('#editor').val();
 //        var attachment = $('#home-attachment').val();
 //        var price = $('#price').val();
@@ -378,6 +381,7 @@
         var month = $('#month').val();
 //        var max_page = parseInt($('#max_page').val());
         console.log(month);
+
         if(year && month){
 
             getPosts();
@@ -395,14 +399,19 @@
             url: "get_month_year", // whatever your URL is
             data: { year: $('#year').val(), month: $('#month').val() },
             beforeSend: function(){ //This is your loading message ADD AN ID
-                $('#content').append("<div id='loading' class='center'>loading items..</div>");
+//                $('#content').append("<div id='loading' class='center'>loading items..</div>");
             },
             complete: function(){ //remove the loading message
                 $('#loading').remove()
             },
             success: function(data) { // success! YAY!! Add HTML to content container
-                console.log(data.return_post);
-                $('#content').append(data.return_post);
+               // console.log(data.return_post);
+                if(data.status){
+                    $('#content').append(data.return_post);
+                }else{
+//                    $(document).scrollHeight = $(document).height()-10;
+                    $(document).scroll = $(document).height()-100;
+                }
                 $('#year').val(data.hidden_year);
                 $('#month').val(data.hidden_month);
             }
@@ -428,7 +437,7 @@
         file: ".jpg",
         placeholder: ":{alias}:"
       }]
-    }); 
+    });
 
     /*
   By Osvaldas Valutis, www.osvaldas.info

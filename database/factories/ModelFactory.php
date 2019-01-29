@@ -22,3 +22,16 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define( App\Post::class, function (Faker\Generator $faker){
+
+    $desc = $faker->unique()->sentence;
+//    $attachment = $faker->image(storage_path('app/public/images/attachment_images'),720, 480);
+//    $attachment_path = explode('\\', $attachment);
+//    $image_name = end($attachment_path);
+    return[
+        'description' => title_case($desc),
+        'price' => 50,
+        'user_id' => 26
+    ];
+});
