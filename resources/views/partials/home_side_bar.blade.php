@@ -2,7 +2,7 @@
     <div class="well sidebar-nav left-sidebar" data-spy="affix" data-offset-top="110">
         <ul class="nav nav-list">
             <li class="active">
-                <a href="home.html">
+                <a href="{{route('home')}}">
                     <i class="glyphicon glyphicon-home"></i>
                     &nbsp; Home
                 </a>

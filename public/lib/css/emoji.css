@@ -57,7 +57,7 @@ img.emoji {
     position: absolute;
     right: 96%;
     top: 83%;
-    font-size: 20px;
+    font-size: 18px;
     opacity: 0.7;
     z-index: 100;
     transition: none;
@@ -67,7 +67,11 @@ img.emoji {
     -webkit-user-select: none;
     -o-user-select: none;
     user-select: none;
-    color: #ededed;
+    color: #848484;
+}
+
+.fa-file-image-o{
+    color: #848484;
 }
 
 .emoji-picker-icon.parent-has-scroll {

@@ -81,10 +81,15 @@
                   <img src="{{asset('img/smile.png')}}" class="emoji-icon m-r-5" id="btn" style="visibility: hidden;">
                   <input type="file" class="home-attachment">
                   <label for="home-attachment">
+                    <i class="fa fa-file-image-o" aria-hidden="true"></i>
                     <input type="file" id="home-attachment" class="home-attachment" name="attachment">
-                    <img src="{{asset('img/attachment.png')}}" width="15" class="m-r-5">
+                    <!-- <img src="{{asset('img/attachment.png')}}" width="15" class="m-r-5"> -->
+
                   </label>
-                  <p id="demo-3" class="demo-3"><input type="search" id="price" name="price" ></p>
+                  <label id="demo-3" class="demo-3">
+<!--                     <i class="fa fa-file-image-o" aria-hidden="true"></i> -->
+                    <input type="search" id="price" name="price">
+                  </label>
                 </div>
                 <div class="pull-right">
                   <input type="submit" class="btn btn-success btn-xs post-btn" value="Post">
@@ -272,7 +277,7 @@
             <!-- end rest of month date -->
             </ul>
             <input type="hidden" id="year" value="{{ $current_year }}" />
-            <input type="hidden" id="month" value="{{ $current_month }}" />
+            <input type="hidden" id="month" value="<?=  date('m') ?>" />
           </div>
           <!-- Timeline Ends here -->
         </div>
@@ -342,6 +347,7 @@
 
     $('#form_data').submit(function(e){
         e.preventDefault();
+
 //        var desc = $('#editor').val();
 //        var attachment = $('#home-attachment').val();
 //        var price = $('#price').val();
@@ -390,6 +396,7 @@
         var month = $('#month').val();
 //        var max_page = parseInt($('#max_page').val());
         console.log(month);
+
         if(year && month){
 
             getPosts();
@@ -407,20 +414,26 @@
             url: "get_month_year", // whatever your URL is
             data: { year: $('#year').val(), month: $('#month').val() },
             beforeSend: function(){ //This is your loading message ADD AN ID
-                $('#content').append("<div id='loading' class='center'>loading items..</div>");
+//                $('#content').append("<div id='loading' class='center'>loading items..</div>");
             },
             complete: function(){ //remove the loading message
                 $('#loading').remove()
             },
             success: function(data) { // success! YAY!! Add HTML to content container
-                console.log(data.return_post);
-                $('#content').append(data.return_post);
+               // console.log(data.return_post);
+                if(data.status){
+                    $('#content').append(data.return_post);
+                }else{
+//                    $(document).scrollHeight = $(document).height()-10;
+                    $(document).scroll = $(document).height()-100;
+                }
                 $('#year').val(data.hidden_year);
                 $('#month').val(data.hidden_month);
             }
         });
 
     } //end of getPosts fu
+
 
     /*
   By Osvaldas Valutis, www.osvaldas.info
