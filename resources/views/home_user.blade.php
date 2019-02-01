@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-@include('partials.home_header')
-
+  @include('partials.home_header')
   <body>
 
   <div class="container">
@@ -20,7 +19,6 @@
         @include('partials.home_menu_bar')
       </div>
     </nav>
-
 
     <div class="container margin-top20">
       <div class="col-sm-12 col-md-12 col-lg-12">
@@ -75,20 +73,23 @@
           <div class="col-sm-12 col-md-12 col-lg-12">
             <div class="post-editor-background">
               <div class="post-editor">
-                  {{--<div id="editor" class="textarea-editor" contentEditable=true data-text="Enter text here"></div>--}}
-
-                <textarea class="textarea-editor" rows="5" id="editor" name="desc" placeholder="Type your text here..."></textarea>
+                <textarea class="form-control textarea-control" rows="5" placeholder="Textarea with emoji Unicode input" data-emojiable="true" data-emoji-input="unicode"></textarea>
               </div>
 
               <div class="post-editor-btn">
                 <div class="pull-left">
-                  <img src="{{asset('img/smile.png')}}" class="emoji-icon m-r-5" id="btn">
+                  <img src="{{asset('img/smile.png')}}" class="emoji-icon m-r-5" id="btn" style="visibility: hidden;">
                   <input type="file" class="home-attachment">
                   <label for="home-attachment">
+                    <i class="fa fa-file-image-o" aria-hidden="true"></i>
                     <input type="file" id="home-attachment" class="home-attachment" name="attachment">
-                    <img src="{{asset('img/attachment.png')}}" width="15" class="m-r-5">
+                    <!-- <img src="{{asset('img/attachment.png')}}" width="15" class="m-r-5"> -->
+
                   </label>
-                  <p id="demo-3" class="demo-3"><input type="search" id="price" name="price" ></p>
+                  <label id="demo-3" class="demo-3">
+<!--                     <i class="fa fa-file-image-o" aria-hidden="true"></i> -->
+                    <input type="search" id="price" name="price">
+                  </label>
                 </div>
                 <div class="pull-right">
                   <input type="submit" class="btn btn-success btn-xs post-btn" value="Post">
@@ -218,9 +219,6 @@
                 @endforeach
               @endif
 
-
-
-
               <!-- start rest of month date -->
               <li>
                 <div class="tldate">
@@ -316,7 +314,24 @@
   ================================================== -->
   <script src="{{asset('js/jquery.min.js')}}"></script>
   <script src="{{asset('js/bootstrap.min.js')}}"></script>
-  <script>
+
+  <!-- Begin emoji-picker JavaScript -->
+    <script src="{{asset('lib/js/config.js')}}"></script>
+    <script src="{{asset('lib/js/util.js')}}"></script>
+    <script src="{{asset('lib/js/jquery.emojiarea.js')}}"></script>
+    <script src="{{asset('lib/js/emoji-picker.js')}}"></script>
+  <!-- End emoji-picker JavaScript -->
+
+    <script>
+      $(function() {
+        window.emojiPicker = new EmojiPicker({
+          emojiable_selector: '[data-emojiable=true]',
+          assetsPath: 'lib/img/',
+          popupButtonClasses: 'fa fa-smile-o'
+        });
+        window.emojiPicker.discover();
+      });
+
     $(document).ready(function(){
       $(".submenu").hide();
       $(".setting-btn").click(function(){
@@ -348,7 +363,7 @@
             contentType: false,
             success: function(data){
                 if(data.listing){
-                    $('.listing_data').prepend(data.listing);
+                  $('.listing_data').prepend(data.listing);
                 }
             },
             error: function (xhr, ajaxOptions, thrownError) {
@@ -418,26 +433,7 @@
         });
 
     } //end of getPosts fu
-  </script>
 
-  <!-- Emojies -->
-  <script src="{{asset('js/jquery.mCustomScrollbar.min.js')}}"></script>
-  <script src="{{asset('js/jquery.emoji.min.js')}}"></script>
-  <!-- Emojies Ends here -->
-
-  <script>
-    $("#editor").emoji({
-      button: "#btn",
-      showTab: false,
-      animation: 'slide',
-      icons: [{
-        name: "Emoji",
-        path: "img/tieba/",
-        maxNum: 50,
-        file: ".jpg",
-        placeholder: ":{alias}:"
-      }]
-    });
 
     /*
   By Osvaldas Valutis, www.osvaldas.info
