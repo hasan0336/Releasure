@@ -35,4 +35,22 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'facebook' => [
+        'client_id' => env('FB_KEY','313897995920505'),         // Your GitHub Client ID
+        'client_secret' => env('CLIENT_SECRET','6e8056c152fe55b579da4c5614c73e65'), // Your GitHub Client Secret
+        'redirect' => 'http://localhost:8080/releasur_php/public/login/facebook/callback',
+    ],
+
+    'google' => [
+        'client_id' => env('G_KEY','72650269631-r2a9sodfv8r1s3sh4775k48t5hmd2vda.apps.googleusercontent.com'),         // Your GitHub Client ID
+        'client_secret' => env('G_CLIENT_SECRET','vgIU98UWpiGjHf-THV6ijYuL'), // Your GitHub Client Secret
+        'redirect' => 'http://localhost:8080/releasur_php/public/login/google/callback',
+    ],
+
+    'linkedin' => [
+        'client_id' => env('L_KEY','811xky4xaufiov'),         // Your GitHub Client ID
+        'client_secret' => env('L_CLIENT_SECRET','BLKDoFW1G7igE120'), // Your GitHub Client Secret
+        'redirect' => 'http://localhost:8080/releasur_php/public/login/linkedin/callback',
+    ],
+
 ];
