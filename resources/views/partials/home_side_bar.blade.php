@@ -7,11 +7,15 @@
                     &nbsp; Home
                 </a>
             </li>
+
             <li>
-                <a href="{{route('sales')}}">
-                    <i class="glyphicon glyphicon-stats"></i>
-                    &nbsp; Sales
-                </a></li>
+                @if(Auth::user()->user_type == 'artist')
+                    <a href="{{route('sales')}}">
+                        <i class="glyphicon glyphicon-stats"></i>
+                        &nbsp; Sales
+                    </a>
+                @endif
+            </li>
             <li>
                 <a href="{{route('featured_artist')}}">
                     <i class="glyphicon glyphicon-star-empty"></i>

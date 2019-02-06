@@ -138,5 +138,53 @@ class RegisterController extends Controller
         return redirect('login');
     }
 
+    public function social_signup()
+    {
+        return view('social_signup');
+    }
+
+    public function social_signup_details(Request $request)
+    {
+
+//        dd($request->input());
+        if($request->input('user_type') == 'follower')
+        {
+//            $validator = Validator::make($request->all(), [
+//                'contact' => 'required',
+//                'address' => 'required'
+//            ]);
+            $data = array(
+                'contact' => $request->input('social_contact'),
+                'address' => $request->input('social_address'),
+                'user_type' => $request->input('user_type')
+            );
+        }
+        else
+        {
+//            $validator = Validator::make($request->all(), [
+//                'profession' => 'required',
+//                'payment_id' => 'required',
+//            ]);
+            $data = array(
+                'user_type' => $request->input('user_type'),
+                'profession' => $request->input('user_type'),
+                'payment_id' => $request->input('payment_id'),
+            );
+        }
+
+        User::where('user_id', $request->input('user_id'))->update($data);
+        $UpdateDetails = User::where('user_id', $request->input('user_id'))->first();
+        Auth::login($UpdateDetails);
+        return redirect('home');
+//        dd($UpdateDetails);
+        //        if (is_null($UpdateDetails)) {
+//            return redirect('login');
+//        }
+//        else
+//        {
+//
+//        }
+    }
+
 
 }

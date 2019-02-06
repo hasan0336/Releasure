@@ -66,9 +66,9 @@
                             <a class="a1_link" href="{{route('forget_password')}}">Forgot Password!</a>
                         </div>
                         <div class="col-md-12 col-xs-12" style="text-align:center;margin-top:20px;">
-                            <i><img src="{{asset('img/facebook.png')}}" width="50"></i>
-                            <i><img src="{{asset('img/google_plus.png')}}" width="45"></i>
-                            <i><img src="{{asset('img/linkedin.png')}}" width="50"></i>
+                            <i><a href="{{url('login/facebook')}}"><img src="{{asset('img/facebook.png')}}" width="50"></a></i>
+                            <i><a href="{{url('login/google')}}"><img src="{{asset('img/google_plus.png')}}" width="45"></a></i>
+                            <i><a href="{{url('login/linkedin')}}"><img src="{{asset('img/linkedin.png')}}" width="50"></a></i>
                         </div>
                     </div>
                 </div>

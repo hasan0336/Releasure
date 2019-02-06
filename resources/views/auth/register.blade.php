@@ -78,11 +78,11 @@
                 </div>
 
                 <div class="input-group follower">
-                  <input type="text" name="profession" class="form-control" id="profession" placeholder="Profession">
+                  <input type="text" name="profession" class="form-control" id="profession" placeholder="Profession" required>
                 </div>
 
                 <div class="input-group follower">
-                  <input type="text" name="payment_id" class="form-control" placeholder="Payment ID">
+                  <input type="text" name="payment_id" class="form-control" placeholder="Payment ID" required>
                 </div>
 
               </div>

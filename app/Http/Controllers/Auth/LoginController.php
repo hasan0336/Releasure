@@ -8,6 +8,7 @@ use Socialite;
 use App\User;
 use Auth;
 use File;
+use Redirect;
 use Illuminate\Http\Request;
 
 class LoginController extends Controller
@@ -61,44 +62,50 @@ class LoginController extends Controller
     {
         session()->put('state', request()->input('state'));
         $socialuser = Socialite::driver($social)->user();
+//        dd($socialuser->email);
         $finduser = User::where('email', $socialuser->email)->first();
-
-        if(count($finduser) > 0) {
+//        dd($finduser->user_type);
+        if(count($finduser) > 0 && $finduser->user_type != null) {
             Auth::login($finduser);
-//            return 'done with old';
             return redirect('login');
         }
         else
         {
-
-            $fileContents = file_get_contents($socialuser->getAvatar());
-            $file_name = time();
-            File::put(public_path() . '/uploads/' .$file_name. ".jpg", $fileContents);
+            if(count($finduser) > 0)
+            {
+                return Redirect::route('social_signup')->with( ['data' => $finduser] );
+            }
+            else
+            {
+                $fileContents = file_get_contents($socialuser->getAvatar());
+                $file_name = time();
+                File::put(public_path() . '/uploads/' .$file_name. ".jpg", $fileContents);
 //            //To show picture
-            $picture = $file_name.'.jpg';
-            $user = new User;
-            $user->name = $socialuser->name;
-            $user->social_token = $socialuser->id;
-            $user->email = $socialuser->email;
-            $user->password = bcrypt('123456');
-            $user->profile_picture = $picture;
-            if($social == 'google')
-            {
-                $user->login_type = 'google';
-            }
-            elseif($social == 'facebook')
-            {
-                $user->login_type = 'facebook';
-            }
-            elseif($social == 'linkedin')
-            {
-                $user->login_type = 'linkedin';
-            }
-            $user->save();
+                $picture = $file_name.'.jpg';
+                $user = new User;
+                $user->name = $socialuser->name;
+                $user->social_token = $socialuser->id;
+                $user->email = $socialuser->email;
+                $user->password = bcrypt('123456');
+                $user->profile_picture = $picture;
+                if($social == 'google')
+                {
+                    $user->login_type = 'google';
+                }
+                elseif($social == 'facebook')
+                {
+                    $user->login_type = 'facebook';
+                }
+                elseif($social == 'linkedin')
+                {
+                    $user->login_type = 'linkedin';
+                }
+                $user->save();
 
-            Auth::login($user);
-
-            return redirect('login');
+//              Auth::login($user);
+                return Redirect::route('social_signup')->with( ['data' => $user] );
+            }
+//            return redirect('social_signup');
         }
 
     }
