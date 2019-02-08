@@ -68,12 +68,14 @@
         <!-- Home Page Middle Section Starts-->
         <div class="col-sm-8 col-md-8 col-lg-8">
           <!-- Post editor starts here-->
+            @if(Auth::user()->user_type == 'artist')
           <form id="form_data" enctype="multipart/form-data">
             {{csrf_field()}}
           <div class="col-sm-12 col-md-12 col-lg-12">
             <div class="post-editor-background">
+
               <div class="post-editor">
-                <textarea class="form-control textarea-control" rows="5" placeholder="Textarea with emoji Unicode input" data-emojiable="true" data-emoji-input="unicode"></textarea>
+                <textarea class="form-control textarea-control" id="textareaemoji" rows="5" name="desc" placeholder="Textarea with emoji Unicode input" data-emojiable="true" data-emoji-input="unicode"></textarea>
               </div>
 
               <div class="post-editor-btn">
@@ -96,9 +98,11 @@
                   {{--<a type="submit" class="btn btn-success btn-xs post-btn">Post</a>--}}
                 </div>
               </div>
+
             </div>
           </div>
           </form>
+        @endif
           <!-- Post editor ends here-->
 
           <!-- Timeline starts here-->
@@ -364,6 +368,7 @@
             success: function(data){
                 if(data.listing){
                   $('.listing_data').prepend(data.listing);
+                  $('#textareaemoji').html('')
                 }
             },
             error: function (xhr, ajaxOptions, thrownError) {

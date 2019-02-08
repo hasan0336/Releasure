@@ -35,5 +35,11 @@ Route::post('change_user_password','UserController@change_user_password')->name(
 Route::post('update_user_profile','UserController@update_user_profile')->name('update_user_profile');
 Route::post('get_month_year','HomeController@get_month_year')->name('get_month_year');
 Route::post('post_data','PostController@post_data')->name('post_data');
+Route::get('social_signup','Auth\RegisterController@social_signup')->name('social_signup');
+Route::post('social_signup_details','Auth\RegisterController@social_signup_details')->name('social_signup_details');
+Route::get('login/{social}', 'Auth\LoginController@redirectToProvider')->where('social','facebook|google|linkedin');
+Route::get('login/{social}/callback', 'Auth\LoginController@handleProviderCallback')->where('social','facebook|google|linkedin');
+
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
+
 
