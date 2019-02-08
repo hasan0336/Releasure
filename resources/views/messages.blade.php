@@ -268,7 +268,7 @@
         </div>
         <!-- <span class="glyphicon glyphicon-remove-sign close-btn"></span> -->
         <div class="panel-heading" id="accordion">
-           <span class="footer-pro-pic">AE</span>&emsp;<b>Hello World 12345</b>
+           <span class="footer-pro-pic">AE</span>&emsp;<b>Hello World</b>
            <div class="btn-group pull-right">
               <a type="button" class="btn btn-default btn-xs" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
               <span class="glyphicon glyphicon-chevron-up"></span>
