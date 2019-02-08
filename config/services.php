@@ -53,4 +53,11 @@ return [
         'redirect' => 'http://localhost:8080/releasur_php/public/login/linkedin/callback',
     ],
 
+    'braintree' => [
+        'environment' => env('BT_ENVIRONMENT', 'sandbox'),
+        'merchantId' => env('BT_MERCHANT_ID'),
+        'publicKey' => env('BT_PUBLIC_KEY'),
+        'privateKey' => env('BT_PRIVATE_KEY'),
+    ],
+
 ];

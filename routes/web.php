@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,7 +24,72 @@ Route::get('/signup_user','HomeController@signup_user')->name('signup_user');
 Route::get('/featured_artist','HomeController@featured_artist')->name('featured_artist');
 Route::get('/sales','HomeController@sales')->name('sales');
 Route::get('/purchases','HomeController@purchases')->name('purchases');
-Route::get('/payment','HomeController@payment')->name('payment');
+//Route::get('/payment','HomeController@payment')->name('payment');
+Route::get('/payment', function () {
+//    dd(454545);
+    $gateway = new Braintree\Gateway([
+        'environment' => config('services.braintree.environment'),
+        'merchantId' => 'wyj8zg78h24csmdy',
+        'publicKey' => 'tkbm8cfzj66thgjs',
+        'privateKey' => '01843636837d3d895354e1636eae84d5'
+    ]);
+//    dd($gateway);
+    $token = $gateway->ClientToken()->generate();
+    return view('payment', [
+        'token' => $token
+    ]);
+})->name('payment');
+
+Route::post('/checkout', function (Request $request) {
+    $gateway = new Braintree\Gateway([
+        'environment' => config('services.braintree.environment'),
+        'merchantId' => 'wyj8zg78h24csmdy',
+        'publicKey' => 'tkbm8cfzj66thgjs',
+        'privateKey' => '01843636837d3d895354e1636eae84d5'
+    ]);
+    $amount = $request->amount;
+    $nonce = $request->payment_method_nonce;
+    $result = $gateway->transaction()->sale([
+        'amount' => $amount,
+        'paymentMethodNonce' => $nonce,
+        'customer' => [
+            'firstName' => Auth::user()->name,
+            'email' => Auth::user()->email
+        ],
+        'options' => [
+            'submitForSettlement' => true
+        ]
+    ]);
+    if ($result->success) {
+        $transaction = $result->transaction;
+        // header("Location: transaction.php?id=" . $transaction->id);
+        return back()->with('success_message', 'Transaction successful. The ID is:'. $transaction->id);
+    } else {
+        $errorString = "";
+        foreach ($result->errors->deepAll() as $error) {
+            $errorString .= 'Error: ' . $error->code . ": " . $error->message . "\n";
+        }
+        // $_SESSION["errors"] = $errorString;
+        // header("Location: index.php");
+        return back()->withErrors('An error occurred with the message: '.$result->message);
+    }
+})->name('checkout');
+
+
+Route::get('/hosted', function () {
+    $gateway = new Braintree\Gateway([
+        'environment' => config('services.braintree.environment'),
+        'merchantId' => config('services.braintree.merchantId'),
+        'publicKey' => config('services.braintree.publicKey'),
+        'privateKey' => config('services.braintree.privateKey')
+    ]);
+    $token = $gateway->ClientToken()->generate();
+    return view('hosted', [
+        'token' => $token
+    ]);
+})->name('hosted');
+
+
 Route::get('/messages','HomeController@messages')->name('messages');
 Route::get('register/verify/{token}', 'Auth\RegisterController@verify')->name('verified_email');
 Route::get('forgot_password','HomeController@forget_password')->name('forget_password');
