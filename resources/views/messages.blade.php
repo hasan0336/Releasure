@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <!-- <link rel="stylesheet" href="css/chat.css"> -->
+    <link rel="stylesheet" href="css/chat.css">
     <link rel="stylesheet" href="css/inner-css.css">
 
   </head>
@@ -59,7 +59,7 @@
                     <div class="msg-text">
                       Hello World1
                       <span class="pull-right">
-                        <a href="#" class="addClass">
+                        <a href="#" class="addClass chat-img">
                           <img src="img/chat.png" class="img-responsive" width="30">
                         </a>
                       </span>
@@ -75,7 +75,7 @@
                     <div class="msg-text">
                       Hello World2
                       <span class="pull-right">
-                        <a href="#" class="addClass">
+                        <a href="#" class="addClass chat-img">
                           <img src="img/chat.png" class="img-responsive" width="30">
                         </a>
                       </span>
@@ -91,7 +91,7 @@
                     <div class="msg-text">
                       Hello World3
                       <span class="pull-right">
-                        <a href="#" class="addClass">                        
+                        <a href="#" class="addClass chat-img">                        
                           <img src="img/chat.png" class="img-responsive" width="30">
                         </a>
                       </span>
@@ -107,7 +107,7 @@
                     <div class="msg-text">
                       Hello World4
                       <span class="pull-right">
-                        <a href="#" class="addClass">                        
+                        <a href="#" class="addClass chat-img">                        
                           <img src="img/chat.png" class="img-responsive" width="30">
                         </a>
                       </span>
@@ -123,7 +123,7 @@
                     <div class="msg-text">
                       Hello World5
                       <span class="pull-right">
-                        <a href="#" class="addClass">                        
+                        <a href="#" class="addClass chat-img">                        
                           <img src="img/chat.png" class="img-responsive" width="30">
                         </a>
                       </span>
@@ -139,7 +139,7 @@
                     <div class="msg-text">
                       Hello World6
                       <span class="pull-right">
-                        <a href="#" class="addClass">                        
+                        <a href="#" class="addClass chat-img">                        
                           <img src="img/chat.png" class="img-responsive" width="30">
                         </a>
                       </span>
@@ -155,7 +155,7 @@
                     <div class="msg-text">
                       Hello World7
                       <span class="pull-right">
-                        <a href="#" class="addClass">                        
+                        <a href="#" class="addClass chat-img">                        
                           <img src="img/chat.png" class="img-responsive" width="30">
                         </a>
                       </span>
@@ -171,7 +171,7 @@
                     <div class="msg-text">
                       Hello World8
                       <span class="pull-right">
-                        <a href="#" class="addClass">                        
+                        <a href="#" class="addClass chat-img">                        
                           <img src="img/chat.png" class="img-responsive" width="30">
                         </a>
                       </span>
@@ -188,80 +188,99 @@
   </div>
 
     <!-- Chat Box Starts here -->
-     <!--  <div class="popup-box chat-popup" id="qnimate">
-         <div class="popup-head">
-            <div class="popup-head-left pull-left"><img src="http://bootsnipp.com/img/avatars/bcf1c0d13e5500875fdd5a7e8ad9752ee16e7462.jpg" alt="iamgurdeeposahan"> John Doe</div>
-            <div class="popup-head-right pull-right">
-               <div class="btn-group">
-                  <button class="chat-header-button" data-toggle="dropdown" type="button" aria-expanded="false">
-                  <i class="glyphicon glyphicon-cog"></i> </button>
-                  <ul role="menu" class="dropdown-menu pull-right">
-                     <li><a href="#">Media</a></li>
-                     <li><a href="#">Block</a></li>
-                     <li><a href="#">Clear Chat</a></li>
-                     <li><a href="#">Email Chat</a></li>
-                  </ul>
-               </div>
-               <button data-widget="remove" id="removeClass" class="chat-header-button pull-right" type="button"><i class="glyphicon glyphicon-off"></i></button>
-            </div>
-         </div>
-         <div class="popup-messages">
-            <div class="direct-chat-messages">
-               <div class="chat-box-single-line">
-                  <abbr class="timestamp">October 8th, 2015</abbr>
-               </div>
-               <div class="direct-chat-msg doted-border">
-                  <div class="direct-chat-info clearfix">
-                     <span class="direct-chat-name pull-left">John</span>
-                  </div>
-                  <img alt="message user image" src="http://bootsnipp.com/img/avatars/bcf1c0d13e5500875fdd5a7e8ad9752ee16e7462.jpg" class="direct-chat-img">
-                  <div class="direct-chat-text">
-                     Hey how are you?
-                  </div>
-                  <div class="direct-chat-info clearfix">
-                     <span class="direct-chat-timestamp pull-right">3.36 PM</span>
-                  </div>
-                  <div class="direct-chat-info clearfix">
-                     <span class="direct-chat-img-reply-small pull-left">
-                     </span>
-                     <span class="direct-chat-reply-name">Clark</span>
-                  </div>
-               </div>
-               <div class="chat-box-single-line">
-                  <abbr class="timestamp">October 9th, 2015</abbr>
-               </div>
-               <div class="direct-chat-msg doted-border">
-                  <div class="direct-chat-info clearfix">
-                     <span class="direct-chat-name pull-left">John</span>
-                  </div>
-                  <img alt="iamgurdeeposahan" src="http://bootsnipp.com/img/avatars/bcf1c0d13e5500875fdd5a7e8ad9752ee16e7462.jpg" class="direct-chat-img">
-                  <div class="direct-chat-text">
-                     Hey bro, how’s everything going ?
-                  </div>
-                  <div class="direct-chat-info clearfix">
-                     <span class="direct-chat-timestamp pull-right">3.36 PM</span>
-                  </div>
-                  <div class="direct-chat-info clearfix">
-                     <img alt="iamgurdeeposahan" src="http://bootsnipp.com/img/avatars/bcf1c0d13e5500875fdd5a7e8ad9752ee16e7462.jpg" class="direct-chat-img big-round">
-                     <span class="direct-chat-reply-name">Clark</span>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="popup-messages-footer">
-            <textarea id="status_message" placeholder="Type a message..." rows="10" cols="40" name="message"></textarea>
-            <div class="btn-footer">
-               <button class="bg_none"><i class="glyphicon glyphicon-film"></i> </button>
-               <button class="bg_none"><i class="glyphicon glyphicon-camera"></i> </button>
-               <button class="bg_none"><i class="glyphicon glyphicon-paperclip"></i> </button>
-               <button class="bg_none pull-right"><i class="glyphicon glyphicon-thumbs-up"></i> </button>
-            </div>
-         </div>
-      </div> -->
-      <!-- Chat Box Ends here -->
+
+     <div class="panel panel-primary mb-0 chat-box">
+      <span class="glyphicon glyphicon-remove-sign close-btn"></span>
+        <div class="panel-collapse collapse" id="collapseOne">
+           <div class="panel-body">
+              <ul class="chat">
+                 <li class="left clearfix">
+                    <span class="chat-img pro-pic pull-left">AF
+                      <!-- <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" width="30" class="img-circle" /> -->
+                    </span>
+                    <div class="chat-body clearfix">
+                       <div class="header">
+                          <strong class="primary-font">Jack Sparrow</strong> <small class="pull-right text-muted">
+                          <span class="glyphicon glyphicon-time"></span>12 mins ago</small>
+                       </div>
+                       <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                          dolor, quis ullamcorper ligula sodales.
+                       </p>
+                    </div>
+                 </li>
+                 <li class="right clearfix">
+                    <span class="chat-img pro-pic pull-right">ME
+                    <!-- <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" width="30" class="img-circle" /> -->
+                    </span>
+                    <div class="chat-body clearfix">
+                       <div class="header">
+                          <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>13 mins ago</small>
+                          <strong class="pull-right primary-font">Bhaumik Patel</strong>
+                       </div>
+                       <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                          dolor, quis ullamcorper ligula sodales.
+                       </p>
+                    </div>
+                 </li>
+                 <li class="left clearfix">
+                    <span class="chat-img pro-pic pull-left">FH
+                    <!-- <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" width="30" class="img-circle" /> -->
+                    </span>
+                    <div class="chat-body clearfix">
+                       <div class="header">
+                          <strong class="primary-font">Jack Sparrow</strong> <small class="pull-right text-muted">
+                          <span class="glyphicon glyphicon-time"></span>14 mins ago</small>
+                       </div>
+                       <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                          dolor, quis ullamcorper ligula sodales.
+                       </p>
+                    </div>
+                 </li>
+                 <li class="right clearfix">
+                    <span class="chat-img pro-pic pull-right">WA
+                    <!-- <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" width="30" class="img-circle" /> -->
+                    </span>
+                    <div class="chat-body clearfix">
+                       <div class="header">
+                          <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>15 mins ago</small>
+                          <strong class="pull-right primary-font">Bhaumik Patel</strong>
+                       </div>
+                       <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                          dolor, quis ullamcorper ligula sodales.
+                       </p>
+                    </div>
+                 </li>
+              </ul>
+           </div>
+           <div class="panel-footer1">
+              <div class="input-group">
+                 <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." />
+                 <span class="input-group-btn">
+                 <button class="btn btn-warning btn-sm btn-chat" id="btn-chat">
+                 Send</button>
+                 </span>
+              </div>
+           </div>
+        </div>
+        <!-- <span class="glyphicon glyphicon-remove-sign close-btn"></span> -->
+        <div class="panel-heading" id="accordion">
+           <span class="footer-pro-pic">AE</span>&emsp;<b>Hello World</b>
+           <div class="btn-group pull-right">
+              <a type="button" class="btn btn-default btn-xs" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+              <span class="glyphicon glyphicon-chevron-up"></span>
+              </a>
+           </div>
+        </div>
+     </div>
+
+    <!-- Chat Box Ends here -->
 
     <footer class="inner-footer">
-      <p>&copy; Releasur 2018. All Rights Reserved.</p>
+      <p>&copy; Releasur 2019. All Rights Reserved.</p>
       <ul class="list-inline">
         <li class="list-inline-item">
           <a href="#">Privacy</a>
@@ -280,18 +299,21 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
-    <!-- <script>
-      $(function(){
-        $(".addClass").click(function () {
-          $('#qnimate').addClass('popup-box-on');
-        });        
-        $("#removeClass").click(function () {
-          $('#qnimate').removeClass('popup-box-on');
-        });
-      });
-    </script> -->
-
     <script>
+      $(".chat-box").hide();
+      /*$(".close-btn").show();*/
+      $(".chat-img").click(function(){
+        $(".chat-box").show();
+      });
+
+      $(".close-btn").click(function(){
+        $(".chat-box").hide();
+      });
+
+/*      $(".glyphicon-chevron-up").click(function(){
+        $(".close-btn").hide();
+      });*/
+
       $(document).ready(function(){
         $(".submenu").hide();
         $(".setting-btn").click(function(){
