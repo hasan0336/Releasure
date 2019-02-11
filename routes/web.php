@@ -44,6 +44,8 @@ Route::post('/checkout', 'PurchaseController@checkout')->name('checkout');
 
 
 Route::get('/hosted','PurchaseController@hosted')->name('hosted');
+Route::get('/drop_in','PurchaseController@drop_in')->name('drop_in');
+Route::get('/token','PurchaseController@token')->name('token');
 
 
 Route::get('/messages','HomeController@messages')->name('messages');
