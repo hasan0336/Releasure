@@ -45,7 +45,7 @@ Route::post('/checkout', 'PurchaseController@checkout')->name('checkout');
 
 Route::get('/hosted','PurchaseController@hosted')->name('hosted');
 
-
+Route::get('/chat','HomeController@chat')->name('chat');
 Route::get('/messages','HomeController@messages')->name('messages');
 Route::get('register/verify/{token}', 'Auth\RegisterController@verify')->name('verified_email');
 Route::get('forgot_password','HomeController@forget_password')->name('forget_password');

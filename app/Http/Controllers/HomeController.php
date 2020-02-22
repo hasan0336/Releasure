@@ -122,6 +122,11 @@ class HomeController extends Controller
         return view('messages');
     }
 
+    public function chat()
+    {
+        return view('chat');
+    }
+
     public function get_month_year(Request $request)
     {
         $month = $request->input('month');
