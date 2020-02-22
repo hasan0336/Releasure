@@ -39,7 +39,7 @@
                   @endforeach
                 @endif
                 <div class="input-group">
-                  <input type="email" name="email" class="form-control" id="user_email" placeholder="Email Address" required>
+                  <input type="email" name="email" class="form-control" id="user_email" placeholder="Email Address">
                 </div>
 
                 <div class="input-group">
@@ -47,7 +47,7 @@
                     <img class="img_eye" src="{{asset('img/eye.png')}}" onclick="loginEye()">
                   </a>
 
-                  <input type="password" name="password" class="form-control" id="user-password" placeholder="Password" pattern=".{8,}" title="Password should be eight or more characters" required>
+                  <input type="password" name="password" class="form-control" id="user-password" placeholder="Password" pattern=".{8,}" title="Password should be eight or more characters">
                 </div>
                 <input type="hidden" name="login_type" value="em">
                 <div class="input-group">
@@ -55,34 +55,34 @@
                     <img class="img_eye" src="{{asset('img/eye.png')}}" onclick="signupEye()">
                   </a>
 
-                  <input type="password" name="password_confirmation" class="form-control" id="confirm-password" placeholder="Confirm Password" pattern=".{8,}" title="Password should be eight or more characters" required>
+                  <input type="password" name="password_confirmation" class="form-control" id="confirm-password" placeholder="Confirm Password" pattern=".{8,}" title="Password should be eight or more characters">
                 </div>
 
                 <div class="input-group">
-                  <input type="text" name="name" class="form-control" id="user_name" placeholder="Name" required>
+                  <input type="text" name="name" class="form-control" id="user_name" placeholder="Name">
                 </div>
 
                 <div class="input-group">
                         <span class="control-fileupload">
                           <label for="fileInput">Choose a file :</label>
-                          <input type="file" id="fileInput">
+                          <input type="file" id="fileInput" name="profile_picture">
                         </span>
                 </div>
 
                 <div class="input-group artist">
-                  <input type="text" name="contact" class="form-control" id="contact" placeholder="Contact No." required>
+                  <input type="text" name="contact" class="form-control" id="contact" placeholder="Contact No.">
                 </div>
 
                 <div class="input-group artist">
-                  <input type="text" name="address" class="form-control" id="address" placeholder="Address" required>
+                  <input type="text" name="address" class="form-control" id="address" placeholder="Address">
                 </div>
 
                 <div class="input-group follower">
-                  <input type="text" name="profession" class="form-control" id="profession" placeholder="Profession" required>
+                  <input type="text" name="profession" class="form-control" id="profession" placeholder="Profession">
                 </div>
 
                 <div class="input-group follower">
-                  <input type="text" name="payment_id" class="form-control" placeholder="Payment ID" required>
+                  <input type="text" name="payment_id" class="form-control" placeholder="Payment ID">
                 </div>
 
               </div>

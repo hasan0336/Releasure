@@ -11,17 +11,31 @@ class PurchaseController extends Controller
 {
     public function hosted()
     {
-	    $gateway = new Braintree\Gateway([
-	        'environment' => config('services.braintree.environment'),
-	        'merchantId' => 'wyj8zg78h24csmdy',
-	        'publicKey' => 'tkbm8cfzj66thgjs',
-	        'privateKey' => '01843636837d3d895354e1636eae84d5'
-	    ]);
+        $gateway = new Braintree\Gateway([
+            'environment' => config('services.braintree.environment'),
+            'merchantId' => config('services.braintree.merchantId'),
+            'publicKey' => config('services.braintree.publicKey'),
+            'privateKey' => config('services.braintree.privateKey')
+        ]);
 	    $token = $gateway->ClientToken()->generate();
 	    return view('hosted', [
 	        'token' => $token
 	    ]);
 	}
+
+    public function drop_in()
+    {
+        $gateway = new Braintree\Gateway([
+            'environment' => config('services.braintree.environment'),
+            'merchantId' => config('services.braintree.merchantId'),
+            'publicKey' => config('services.braintree.publicKey'),
+            'privateKey' => config('services.braintree.privateKey')
+        ]);
+        $token = $gateway->ClientToken()->generate(["customerId" => Auth::user()->user_id]);
+        return view('drop_in', [
+            'token' => $token
+        ]);
+    }
 
 	public function checkout(Request $request)
 	{
@@ -33,6 +47,7 @@ class PurchaseController extends Controller
 	    ]);
 	    $amount = $request->amount;
 	    $nonce = $request->payment_method_nonce;
+
 	    $result = $gateway->transaction()->sale([
 	        'amount' => $amount,
 	        'paymentMethodNonce' => $nonce,

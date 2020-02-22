@@ -13,6 +13,9 @@ use Auth;
 use Mail;
 use DB;
 use Session;
+use Laravel\Cashier\Billable;
+use Braintree_Configuration;
+use Braintree;
 class RegisterController extends Controller
 {
     /*
@@ -96,6 +99,31 @@ class RegisterController extends Controller
             'profile_picture' => $filename,
             'email_token' => str_random(10),
         ]);
+
+        //Create Braintree user
+        $gateway = new Braintree\Gateway([
+            'environment' => config('services.braintree.environment'),
+            'merchantId' => config('services.braintree.merchantId'),
+            'publicKey' => config('services.braintree.publicKey'),
+            'privateKey' => config('services.braintree.privateKey')
+        ]);
+        $result = $gateway->customer()->create([
+            'id' => $user->user_id,
+            'firstName' => $user->name,
+            'email' => $user->email
+        ]);
+
+//        $result = $gateway->paymentMethod()->create([
+//            'customerId' => $result->customer->id,
+//            'paymentMethodNonce' => nonceFromTheClient
+//        ]);
+
+        $braintree_data = array(
+            'braintree_id' => $result->customer->id
+        );
+        User::where('user_id', $user->user_id)->update($braintree_data);
+
+
 
         $email = new emailverification(new User(['email_token' => $user->email_token, 'name' => $user->name, 'email'=> $user->email]));
         Mail::to($user->email)->send($email);
